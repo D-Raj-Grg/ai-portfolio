@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Zap, ShoppingCart, Target, Palette, FileText, Sparkles } from "lucide-react";
+import { ExternalLink, Zap, ShoppingCart, Target, Palette, FileText, Sparkles, MessageSquare } from "lucide-react";
 import { BentoGrid, BentoCard } from "./magicui/bento-grid";
 import { GradientText } from "./magicui/animated-text";
 import { Badge } from "./ui/badge";
@@ -18,6 +18,17 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    title: "AI Chatbot Platform",
+    description: "Next-Gen Conversational AI Experience",
+    longDescription:
+      "Advanced AI chatbot powered by OpenAI GPT-4o with real-time web search, multi-file handling (images, documents), and transparent reasoning display. Features beautiful responsive UI with dark/light themes, source citations, and seamless interactions. Built with Next.js 16, React 19, and shadcn/ui.",
+    icon: MessageSquare,
+    link: "https://raj-ai-chatbot.vercel.app/",
+    tags: ["GPT-4o", "Web Search", "Next.js 16", "React 19"],
+    color: "#10a37f",
+    gradient: "from-emerald-500/20 to-teal-500/20",
+  },
   {
     title: "PDF Q&A AI SaaS",
     description: "Your PDF Documents, Now Interactive",

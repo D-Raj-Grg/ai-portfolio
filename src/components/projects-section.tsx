@@ -20,45 +20,45 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Astra Theme",
-    description: "The most popular WordPress theme of all time",
+    description: "The world's most popular WordPress theme",
     longDescription:
-      "Fast, lightweight & customizable WordPress theme trusted by millions. Built with performance and flexibility at its core, Astra supports all major page builders and offers extensive design options.",
+      "Fast, lightweight & customizable WordPress theme trusted by 7M+ websites worldwide. Engineered with performance-first architecture, intelligent design systems, and seamless page builder integration for limitless customization.",
     icon: Palette,
     link: "https://wpastra.com",
-    tags: ["WordPress", "Theme Development", "Performance"],
+    tags: ["WordPress", "Performance", "7M+ Active"],
     color: "#7143e3",
     gradient: "from-purple-500/20 to-yellow-500/20",
   },
   {
     title: "OttoKit",
-    description: "All-in-one automation platform for WordPress & beyond",
+    description: "No-code AI automation platform",
     longDescription:
-      "Formerly SureTriggers - A powerful no-code AI automation tool that streamlines workflows. Built complete workflow automation system using ReactFlow v12 with interactive canvas builder.",
+      "Formerly SureTriggers - Build intelligent automation workflows with AI-powered triggers and actions. Features an interactive canvas builder powered by ReactFlow v12, enabling teams to create complex workflows without code.",
     icon: Zap,
     link: "https://ottokit.com",
-    tags: ["React", "Automation", "SaaS", "ReactFlow"],
+    tags: ["AI Automation", "React", "No-Code", "SaaS"],
     color: "#d2f059",
     gradient: "from-green-400/20 to-purple-600/20",
   },
   {
     title: "SureCart",
-    description: "NextJS based checkout experience",
+    description: "Modern checkout built with AI insights",
     longDescription:
-      "Best WordPress e-commerce plugin for selling digital and physical products. A powerful checkout solution built with Next.js, featuring seamless payment processing and cart management.",
+      "Next-generation e-commerce platform built with Next.js 14. Leverages AI-driven analytics and smart payment optimization to deliver lightning-fast checkout experiences with intelligent cart abandonment recovery.",
     icon: ShoppingCart,
     link: "https://surecart.com",
-    tags: ["Next.js", "E-commerce", "Payments"],
+    tags: ["Next.js", "AI Commerce", "Payments"],
     color: "#00824c",
     gradient: "from-emerald-500/20 to-green-600/20",
   },
   {
     title: "Sigmize",
-    description: "A/B Testing & Website Optimization Platform",
+    description: "AI-powered A/B testing & optimization",
     longDescription:
-      "All-in-one website optimization and A/B testing platform. Empowers teams to run experiments and make data-driven decisions to improve user experience and conversions.",
+      "Intelligent experimentation platform that uses machine learning to identify winning variations faster. Run AI-assisted experiments with automated statistical analysis and predictive insights for data-driven optimization.",
     icon: Target,
     link: "https://sigmize.com",
-    tags: ["A/B Testing", "Analytics", "Optimization"],
+    tags: ["AI Testing", "ML Analytics", "Optimization"],
     color: "#005f5a",
     gradient: "from-teal-500/20 to-cyan-500/20",
   },
@@ -96,69 +96,70 @@ export function ProjectsSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={index === 0 ? "md:col-span-2" : ""}
             >
-              <BentoCard
-                Icon={project.icon}
-                className="h-full group cursor-pointer"
-                background={
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-50`}
-                  />
-                }
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full"
               >
-                <div className="flex flex-col h-full">
-                  {/* Icon with Brand Color */}
-                  <div
-                    className="mb-4 w-14 h-14 rounded-xl flex items-center justify-center"
-                    style={{
-                      backgroundColor: `${project.color}20`,
-                    }}
-                  >
-                    <project.icon
-                      className="w-7 h-7"
-                      style={{ color: project.color }}
+                <BentoCard
+                  className="h-full group cursor-pointer"
+                  background={
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-50`}
                     />
+                  }
+                >
+                  <div className="flex flex-col h-full">
+                    {/* Icon with Brand Color */}
+                    <div
+                      className="mb-4 w-14 h-14 rounded-xl flex items-center justify-center"
+                      style={{
+                        backgroundColor: `${project.color}20`,
+                      }}
+                    >
+                      <project.icon
+                        className="w-7 h-7"
+                        style={{ color: project.color }}
+                      />
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all">
+                      {project.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-slate-300 mb-3 font-medium text-base">
+                      {project.description}
+                    </p>
+
+                    {/* Long Description */}
+                    <p className="text-sm text-slate-400 mb-4 line-clamp-3 leading-relaxed">
+                      {project.longDescription}
+                    </p>
+
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tags.map((tag) => (
+                        <Badge
+                          key={tag}
+                          variant="outline"
+                          className="border-white/20 text-slate-300 hover:bg-white/10 text-xs"
+                        >
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+
+                    {/* Link */}
+                    <div className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-blue-400 group-hover:text-blue-300 transition-colors">
+                      <span>Visit Project</span>
+                      <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    </div>
                   </div>
-
-                  {/* Title */}
-                  <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all">
-                    {project.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-slate-400 mb-3 font-medium">
-                    {project.description}
-                  </p>
-
-                  {/* Long Description */}
-                  <p className="text-sm text-slate-500 mb-4 line-clamp-3">
-                    {project.longDescription}
-                  </p>
-
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag) => (
-                      <Badge
-                        key={tag}
-                        variant="outline"
-                        className="border-white/20 text-slate-300 hover:bg-white/10"
-                      >
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-
-                  {/* Link */}
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white transition-colors group/link"
-                  >
-                    <span>Visit Project</span>
-                    <ExternalLink className="w-4 h-4 group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />
-                  </a>
-                </div>
-              </BentoCard>
+                </BentoCard>
+              </a>
             </motion.div>
           ))}
         </BentoGrid>

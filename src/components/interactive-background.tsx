@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 interface Dot {
@@ -13,20 +13,25 @@ interface Dot {
 
 export function InteractiveBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const mousePositionRef = useRef({ x: 0, y: 0 });
   const dotsRef = useRef<Dot[]>([]);
+  const animationFrameRef = useRef<number>();
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d", { alpha: true });
     if (!ctx) return;
 
     // Set canvas size
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = window.innerWidth * dpr;
+      canvas.height = window.innerHeight * dpr;
+      canvas.style.width = `${window.innerWidth}px`;
+      canvas.style.height = `${window.innerHeight}px`;
+      ctx.scale(dpr, dpr);
 
       // Reinitialize dots on resize
       initializeDots();
@@ -34,9 +39,9 @@ export function InteractiveBackground() {
 
     const initializeDots = () => {
       dotsRef.current = [];
-      const spacing = 40;
-      const cols = Math.floor(canvas.width / spacing);
-      const rows = Math.floor(canvas.height / spacing);
+      const spacing = 50; // Increased spacing for better performance
+      const cols = Math.floor(window.innerWidth / spacing);
+      const rows = Math.floor(window.innerHeight / spacing);
 
       for (let i = 0; i < cols; i++) {
         for (let j = 0; j < rows; j++) {
@@ -54,57 +59,66 @@ export function InteractiveBackground() {
     };
 
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+      const mousePos = mousePositionRef.current;
 
       dotsRef.current.forEach((dot) => {
-        const dx = mousePosition.x - dot.baseX;
-        const dy = mousePosition.y - dot.baseY;
+        const dx = mousePos.x - dot.baseX;
+        const dy = mousePos.y - dot.baseY;
         const distance = Math.sqrt(dx * dx + dy * dy);
-        const maxDistance = 200;
+        const maxDistance = 150;
 
         if (distance < maxDistance) {
           const force = (maxDistance - distance) / maxDistance;
           const angle = Math.atan2(dy, dx);
-          dot.x = dot.baseX - Math.cos(angle) * force * 30;
-          dot.y = dot.baseY - Math.sin(angle) * force * 30;
+          dot.x = dot.baseX - Math.cos(angle) * force * 25;
+          dot.y = dot.baseY - Math.sin(angle) * force * 25;
         } else {
           // Spring back to original position
-          dot.x += (dot.baseX - dot.x) * 0.05;
-          dot.y += (dot.baseY - dot.y) * 0.05;
+          dot.x += (dot.baseX - dot.x) * 0.1;
+          dot.y += (dot.baseY - dot.y) * 0.1;
         }
 
-        // Draw dot with gradient
-        const gradient = ctx.createRadialGradient(dot.x, dot.y, 0, dot.x, dot.y, dot.size);
-        gradient.addColorStop(0, "rgba(255, 255, 255, 0.8)");
-        gradient.addColorStop(1, "rgba(255, 255, 255, 0.1)");
-
-        ctx.fillStyle = gradient;
+        // Draw dot with simpler rendering
+        ctx.fillStyle = `rgba(255, 255, 255, ${0.4 + Math.random() * 0.2})`;
         ctx.beginPath();
         ctx.arc(dot.x, dot.y, dot.size, 0, Math.PI * 2);
         ctx.fill();
       });
 
-      requestAnimationFrame(animate);
+      animationFrameRef.current = requestAnimationFrame(animate);
+    };
+
+    // Throttle mouse move updates
+    let rafId: number;
+    const handleMouseMove = (e: MouseEvent) => {
+      if (rafId) return;
+      rafId = requestAnimationFrame(() => {
+        mousePositionRef.current = { x: e.clientX, y: e.clientY };
+        rafId = 0;
+      });
+    };
+
+    // Debounce resize
+    let resizeTimeout: NodeJS.Timeout;
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(resizeCanvas, 150);
     };
 
     resizeCanvas();
-    window.addEventListener("resize", resizeCanvas);
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    window.addEventListener("resize", handleResize);
     animate();
 
     return () => {
-      window.removeEventListener("resize", resizeCanvas);
-    };
-  }, [mousePosition]);
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("resize", handleResize);
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+      clearTimeout(resizeTimeout);
     };
   }, []);
 

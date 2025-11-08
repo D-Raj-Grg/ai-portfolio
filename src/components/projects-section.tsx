@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Zap, ShoppingCart, Target, Palette } from "lucide-react";
+import { ExternalLink, Zap, ShoppingCart, Target, Palette, FileText, Sparkles } from "lucide-react";
 import { BentoGrid, BentoCard } from "./magicui/bento-grid";
 import { GradientText } from "./magicui/animated-text";
 import { Badge } from "./ui/badge";
@@ -18,6 +18,17 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    title: "PDF Q&A AI SaaS",
+    description: "Your PDF Documents, Now Interactive",
+    longDescription:
+      "Upload any PDF and ask questions in natural language. Powered by Claude AI for intelligent, contextual understanding. Get instant, accurate answers with source citations in under 5 seconds. Perfect for research, studying, and professional document analysis with 100% private & secure processing.",
+    icon: Sparkles,
+    link: "https://pdf-qna-ai-saas.vercel.app/",
+    tags: ["Claude AI", "Next.js", "RAG", "10MB Max"],
+    color: "#8b5cf6",
+    gradient: "from-violet-500/20 to-fuchsia-500/20",
+  },
   {
     title: "Astra Theme",
     description: "The world's most popular WordPress theme",

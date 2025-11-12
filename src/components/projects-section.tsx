@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Zap, ShoppingCart, Target, Palette, FileText, Sparkles, MessageSquare } from "lucide-react";
+import { ExternalLink, Zap, ShoppingCart, Target, Palette, FileText, Sparkles, MessageSquare, Shield } from "lucide-react";
 import { BentoGrid, BentoCard } from "./magicui/bento-grid";
 import { GradientText } from "./magicui/animated-text";
 import { Badge } from "./ui/badge";
@@ -28,6 +28,17 @@ const projects: Project[] = [
     tags: ["GPT-4o", "Web Search", "Next.js 16", "React 19"],
     color: "#10a37f",
     gradient: "from-emerald-500/20 to-teal-500/20",
+  },
+  {
+    title: "NGLFS",
+    description: "Anonymous Feedback, Zero Signup",
+    longDescription:
+      "Anonymous messaging platform that lets you receive honest feedback from friends without requiring them to sign up. Features a beautiful inbox interface with analytics dashboard, encrypted data storage, and hashed IP addresses for maximum privacy. 100% anonymous, ad-free experience with instant setup.",
+    icon: Shield,
+    link: "https://nglfs.vercel.app/",
+    tags: ["Next.js", "Anonymous", "Privacy", "Analytics"],
+    color: "#3b82f6",
+    gradient: "from-blue-500/20 to-indigo-500/20",
   },
   {
     title: "PDF Q&A AI SaaS",

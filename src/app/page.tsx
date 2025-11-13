@@ -4,6 +4,7 @@ import { FloatingNavbar } from "@/components/floating-navbar";
 import { HeroSection } from "@/components/hero-section";
 import { SkillsSection } from "@/components/skills-section";
 import { ProjectsSection } from "@/components/projects-section";
+import { GitHubStatsSection } from "@/components/github-stats-section";
 import { ExperienceSection } from "@/components/experience-section";
 import { ContactSection } from "@/components/contact-section";
 
@@ -27,6 +28,7 @@ export default function Home() {
         <HeroSection />
         <SkillsSection />
         <ProjectsSection />
+        <GitHubStatsSection />
         <ExperienceSection />
         <ContactSection />
       </main>

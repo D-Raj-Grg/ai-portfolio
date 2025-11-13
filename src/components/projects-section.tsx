@@ -1,68 +1,134 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Card } from "./ui/card";
-import { Button } from "./ui/button";
+import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen } from "lucide-react";
+import { BentoGrid, BentoCard } from "./magicui/bento-grid";
+import { GradientText } from "./magicui/animated-text";
 import { Badge } from "./ui/badge";
-import { ExternalLink, Sparkles, ChefHat, BookOpen, Languages } from "lucide-react";
+import { ComponentType } from "react";
+import { LucideProps } from "lucide-react";
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  longDescription: string;
+  icon: ComponentType<LucideProps>;
+  link: string;
+  tags: string[];
+  color: string;
+  gradient: string;
+}
+
+const projects: Project[] = [
+  {
+    title: "AI Chatbot Platform",
+    description: "Next-Gen Conversational AI Experience",
+    longDescription:
+      "Advanced AI chatbot powered by OpenAI GPT-4o with real-time web search, multi-file handling (images, documents), and transparent reasoning display. Features beautiful responsive UI with dark/light themes, source citations, and seamless interactions. Built with Next.js 16, React 19, and shadcn/ui.",
+    icon: MessageSquare,
+    link: "https://raj-ai-chatbot.vercel.app/",
+    tags: ["GPT-4o", "Web Search", "Next.js 16", "React 19"],
+    color: "#10a37f",
+    gradient: "from-emerald-500/20 to-teal-500/20",
+  },
   {
     title: "LinguaChat",
-    subtitle: "AI-Powered Language Learning",
-    description:
-      "Master any language through conversation. An AI companion that enables users to practice real dialogue, receive instant feedback, and build confidence in their target language.",
-    features: [
-      "Real conversations with AI in 5+ languages",
-      "Instant grammar and usage corrections",
-      "Automatic vocabulary saving and review",
-      "Adaptive difficulty scaling",
-      "Scenario-based practice (travel, dining, work)",
-      "Progress tracking and vocabulary metrics",
-    ],
-    technologies: ["Next.js", "React", "OpenAI", "TypeScript", "Tailwind CSS"],
+    description: "AI-Powered Language Learning",
+    longDescription:
+      "Master any language through conversation. An AI companion that enables users to practice real dialogue in 5+ languages, receive instant grammar corrections, and build confidence with adaptive difficulty scaling. Features scenario-based practice and comprehensive progress tracking.",
     icon: Languages,
-    color: "from-blue-500 to-cyan-500",
-    liveUrl: "https://ai-language-learning-raj.vercel.app/",
+    link: "https://ai-language-learning-raj.vercel.app/",
+    tags: ["OpenAI", "Next.js", "TypeScript", "5+ Languages"],
+    color: "#3b82f6",
     gradient: "from-blue-500/20 to-cyan-500/20",
   },
   {
     title: "ChefMate",
-    subtitle: "AI Recipe Generator",
-    description:
-      "Turn ingredients into delicious meals. An AI kitchen companion that generates personalized recipes from available ingredients, reducing food waste and making cooking accessible.",
-    features: [
-      "Generate recipes from available ingredients",
-      "Dietary customization and preferences",
-      "Instant creative recipe generation",
-      "Popular recipe suggestions",
-      "Step-by-step cooking instructions",
-      "Progressive Web App support",
-    ],
-    technologies: ["Next.js", "React", "AI/ML", "PWA", "Tailwind CSS"],
+    description: "AI Recipe Generator",
+    longDescription:
+      "Turn ingredients into delicious meals. An AI kitchen companion that generates personalized recipes from available ingredients, reducing food waste and making cooking accessible. Includes dietary customization, instant recipe generation, and PWA support for mobile access.",
     icon: ChefHat,
-    color: "from-orange-500 to-red-500",
-    liveUrl: "https://ai-recipe-generator-raj.vercel.app/",
+    link: "https://ai-recipe-generator-raj.vercel.app/",
+    tags: ["AI/ML", "Next.js", "PWA", "Recipe Gen"],
+    color: "#f97316",
     gradient: "from-orange-500/20 to-red-500/20",
   },
   {
     title: "Study Buddy",
-    subtitle: "AI-Powered Study Companion",
-    description:
-      "Study smarter, not harder. Transform educational content into interactive learning tools with AI-generated quizzes, flashcards, and concept explanations.",
-    features: [
-      "AI Quiz Generator with multiple formats",
-      "Smart Flashcards with spaced repetition",
-      "Concept Explainer with examples",
-      "Visual breakdowns and analogies",
-      "Progress tracking",
-      "Dark/Light mode support",
-    ],
-    technologies: ["Next.js", "React", "AI/ML", "Tailwind CSS", "TypeScript"],
+    description: "AI-Powered Study Companion",
+    longDescription:
+      "Study smarter, not harder. Transform educational content into interactive learning tools with AI-generated quizzes, smart flashcards with spaced repetition, and concept explanations with visual breakdowns and analogies for better understanding.",
     icon: BookOpen,
-    color: "from-purple-500 to-pink-500",
-    liveUrl: "https://ai-study-buddy-raj.vercel.app/",
+    link: "https://ai-study-buddy-raj.vercel.app/",
+    tags: ["AI/ML", "Next.js", "TypeScript", "Education"],
+    color: "#a855f7",
     gradient: "from-purple-500/20 to-pink-500/20",
+  },
+  {
+    title: "NGLFS",
+    description: "Anonymous Feedback, Zero Signup",
+    longDescription:
+      "Anonymous messaging platform that lets you receive honest feedback from friends without requiring them to sign up. Features a beautiful inbox interface with analytics dashboard, encrypted data storage, and hashed IP addresses for maximum privacy. 100% anonymous, ad-free experience with instant setup.",
+    icon: Shield,
+    link: "https://nglfs.vercel.app/",
+    tags: ["Next.js", "Anonymous", "Privacy", "Analytics"],
+    color: "#3b82f6",
+    gradient: "from-blue-500/20 to-indigo-500/20",
+  },
+  {
+    title: "PDF Q&A AI SaaS",
+    description: "Your PDF Documents, Now Interactive",
+    longDescription:
+      "Upload any PDF and ask questions in natural language. Powered by Claude AI for intelligent, contextual understanding. Get instant, accurate answers with source citations in under 5 seconds. Perfect for research, studying, and professional document analysis with 100% private & secure processing.",
+    icon: Sparkles,
+    link: "https://pdf-qna-ai-saas.vercel.app/",
+    tags: ["Claude AI", "Next.js", "RAG", "10MB Max"],
+    color: "#8b5cf6",
+    gradient: "from-violet-500/20 to-fuchsia-500/20",
+  },
+  {
+    title: "Astra Theme",
+    description: "The world's most popular WordPress theme",
+    longDescription:
+      "Fast, lightweight & customizable WordPress theme trusted by 7M+ websites worldwide. Engineered with performance-first architecture, intelligent design systems, and seamless page builder integration for limitless customization.",
+    icon: Palette,
+    link: "https://wpastra.com",
+    tags: ["WordPress", "Performance", "7M+ Active"],
+    color: "#7143e3",
+    gradient: "from-purple-500/20 to-yellow-500/20",
+  },
+  {
+    title: "OttoKit",
+    description: "No-code AI automation platform",
+    longDescription:
+      "Formerly SureTriggers - Build intelligent automation workflows with AI-powered triggers and actions. Features an interactive canvas builder powered by ReactFlow v12, enabling teams to create complex workflows without code.",
+    icon: Zap,
+    link: "https://ottokit.com",
+    tags: ["AI Automation", "React", "No-Code", "SaaS"],
+    color: "#d2f059",
+    gradient: "from-green-400/20 to-purple-600/20",
+  },
+  {
+    title: "SureCart",
+    description: "Modern checkout built with AI insights",
+    longDescription:
+      "Next-generation e-commerce platform built with Next.js 14. Leverages AI-driven analytics and smart payment optimization to deliver lightning-fast checkout experiences with intelligent cart abandonment recovery.",
+    icon: ShoppingCart,
+    link: "https://surecart.com",
+    tags: ["Next.js", "AI Commerce", "Payments"],
+    color: "#00824c",
+    gradient: "from-emerald-500/20 to-green-600/20",
+  },
+  {
+    title: "Sigmize",
+    description: "AI-powered A/B testing & optimization",
+    longDescription:
+      "Intelligent experimentation platform that uses machine learning to identify winning variations faster. Run AI-assisted experiments with automated statistical analysis and predictive insights for data-driven optimization.",
+    icon: Target,
+    link: "https://sigmize.com",
+    tags: ["AI Testing", "ML Analytics", "Optimization"],
+    color: "#005f5a",
+    gradient: "from-teal-500/20 to-cyan-500/20",
   },
 ];
 
@@ -70,130 +136,120 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="py-20 relative">
       <div className="container mx-auto px-4">
+        {/* Section Header */}
         <motion.div
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            Featured{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Projects
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <GradientText>Featured Projects</GradientText>
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">
-            Innovative AI-powered applications built with modern web technologies
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+            Transforming ideas into powerful digital experiences. Here are some
+            of the impactful projects I&apos;ve contributed to.
           </p>
         </motion.div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+        {/* Projects Grid */}
+        <BentoGrid className="max-w-7xl mx-auto">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.2, duration: 0.5 }}
-              className="h-full"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className={index === 0 ? "md:col-span-2" : ""}
             >
-              <Card className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm border-white/10 p-6 hover:border-white/20 transition-all duration-300 group h-full flex flex-col">
-                {/* Header with Icon */}
-                <div className="flex items-start justify-between mb-4">
-                  <div
-                    className={`w-14 h-14 rounded-xl bg-gradient-to-br ${project.color} opacity-20 group-hover:opacity-30 transition-opacity flex items-center justify-center flex-shrink-0`}
-                  >
-                    <project.icon className="w-7 h-7 text-white" />
-                  </div>
-                  <motion.div
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <Sparkles className="w-5 h-5 text-yellow-400" />
-                  </motion.div>
-                </div>
-
-                {/* Title & Subtitle */}
-                <div className="mb-3">
-                  <h3 className="text-2xl font-bold text-white mb-1">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-blue-400 font-medium">
-                    {project.subtitle}
-                  </p>
-                </div>
-
-                {/* Description */}
-                <p className="text-slate-300 text-sm mb-4 leading-relaxed">
-                  {project.description}
-                </p>
-
-                {/* Features */}
-                <div className="mb-4 flex-grow">
-                  <h4 className="text-xs font-semibold text-slate-400 mb-2 uppercase tracking-wider">
-                    Key Features
-                  </h4>
-                  <ul className="space-y-1.5">
-                    {project.features.slice(0, 4).map((feature, i) => (
-                      <li
-                        key={i}
-                        className="text-xs text-slate-400 flex items-start gap-2"
-                      >
-                        <span className="text-blue-400 mt-0.5 flex-shrink-0">
-                          ▸
-                        </span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Technologies */}
-                <div className="mb-4">
-                  <h4 className="text-xs font-semibold text-slate-400 mb-2 uppercase tracking-wider">
-                    Technologies
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
-                      <Badge
-                        key={tech}
-                        variant="secondary"
-                        className="bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Actions */}
-                <div className="flex gap-3 mt-auto pt-4 border-t border-white/10">
-                  <Button
-                    size="sm"
-                    className={`flex-1 bg-gradient-to-r ${project.color} hover:opacity-90 text-white font-semibold`}
-                    asChild
-                  >
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2"
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full"
+              >
+                <BentoCard
+                  className="h-full group cursor-pointer"
+                  background={
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-50`}
+                    />
+                  }
+                >
+                  <div className="flex flex-col h-full">
+                    {/* Icon with Brand Color */}
+                    <div
+                      className="mb-4 w-14 h-14 rounded-xl flex items-center justify-center"
+                      style={{
+                        backgroundColor: `${project.color}20`,
+                      }}
                     >
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
-                    </a>
-                  </Button>
-                </div>
+                      <project.icon
+                        className="w-7 h-7"
+                        style={{ color: project.color }}
+                      />
+                    </div>
 
-                {/* Gradient Overlay */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none`}
-                />
-              </Card>
+                    {/* Title */}
+                    <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all">
+                      {project.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-slate-300 mb-3 font-medium text-base">
+                      {project.description}
+                    </p>
+
+                    {/* Long Description */}
+                    <p className="text-sm text-slate-400 mb-4 line-clamp-3 leading-relaxed">
+                      {project.longDescription}
+                    </p>
+
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tags.map((tag) => (
+                        <Badge
+                          key={tag}
+                          variant="outline"
+                          className="border-white/20 text-slate-300 hover:bg-white/10 text-xs"
+                        >
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+
+                    {/* Link */}
+                    <div className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-blue-400 group-hover:text-blue-300 transition-colors">
+                      <span>Visit Project</span>
+                      <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    </div>
+                  </div>
+                </BentoCard>
+              </a>
             </motion.div>
           ))}
-        </div>
+        </BentoGrid>
+
+        {/* Additional Stats or CTA */}
+        <motion.div
+          className="mt-16 text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <p className="text-slate-400 mb-6">
+            Interested in collaborating on the next big thing?
+          </p>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold rounded-full transition-all hover:scale-105"
+          >
+            Let&apos;s Work Together
+          </a>
+        </motion.div>
       </div>
     </section>
   );

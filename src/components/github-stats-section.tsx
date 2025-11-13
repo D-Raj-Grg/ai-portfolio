@@ -2,11 +2,12 @@
 
 import { motion } from "framer-motion";
 import { GradientText } from "./magicui/animated-text";
-import { GitBranch, Star, GitFork, Users } from "lucide-react";
+import { GitBranch, Star, GitFork, Users, LucideProps } from "lucide-react";
 import { Badge } from "./ui/badge";
+import { ComponentType } from "react";
 
 interface GitHubStats {
-  icon: any;
+  icon: ComponentType<LucideProps>;
   label: string;
   value: string;
   color: string;

@@ -1,16 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Zap, ShoppingCart, Target, Palette, FileText, Sparkles, MessageSquare, Shield } from "lucide-react";
+import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen } from "lucide-react";
 import { BentoGrid, BentoCard } from "./magicui/bento-grid";
 import { GradientText } from "./magicui/animated-text";
 import { Badge } from "./ui/badge";
+import { ComponentType } from "react";
+import { LucideProps } from "lucide-react";
 
 interface Project {
   title: string;
   description: string;
   longDescription: string;
-  icon: any;
+  icon: ComponentType<LucideProps>;
   link: string;
   tags: string[];
   color: string;
@@ -28,6 +30,39 @@ const projects: Project[] = [
     tags: ["GPT-4o", "Web Search", "Next.js 16", "React 19"],
     color: "#10a37f",
     gradient: "from-emerald-500/20 to-teal-500/20",
+  },
+  {
+    title: "LinguaChat",
+    description: "AI-Powered Language Learning",
+    longDescription:
+      "Master any language through conversation. An AI companion that enables users to practice real dialogue in 5+ languages, receive instant grammar corrections, and build confidence with adaptive difficulty scaling. Features scenario-based practice and comprehensive progress tracking.",
+    icon: Languages,
+    link: "https://ai-language-learning-raj.vercel.app/",
+    tags: ["OpenAI", "Next.js", "TypeScript", "5+ Languages"],
+    color: "#3b82f6",
+    gradient: "from-blue-500/20 to-cyan-500/20",
+  },
+  {
+    title: "ChefMate",
+    description: "AI Recipe Generator",
+    longDescription:
+      "Turn ingredients into delicious meals. An AI kitchen companion that generates personalized recipes from available ingredients, reducing food waste and making cooking accessible. Includes dietary customization, instant recipe generation, and PWA support for mobile access.",
+    icon: ChefHat,
+    link: "https://ai-recipe-generator-raj.vercel.app/",
+    tags: ["AI/ML", "Next.js", "PWA", "Recipe Gen"],
+    color: "#f97316",
+    gradient: "from-orange-500/20 to-red-500/20",
+  },
+  {
+    title: "Study Buddy",
+    description: "AI-Powered Study Companion",
+    longDescription:
+      "Study smarter, not harder. Transform educational content into interactive learning tools with AI-generated quizzes, smart flashcards with spaced repetition, and concept explanations with visual breakdowns and analogies for better understanding.",
+    icon: BookOpen,
+    link: "https://ai-study-buddy-raj.vercel.app/",
+    tags: ["AI/ML", "Next.js", "TypeScript", "Education"],
+    color: "#a855f7",
+    gradient: "from-purple-500/20 to-pink-500/20",
   },
   {
     title: "NGLFS",
@@ -114,7 +149,7 @@ export function ProjectsSection() {
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
             Transforming ideas into powerful digital experiences. Here are some
-            of the impactful projects I've contributed to.
+            of the impactful projects I&apos;ve contributed to.
           </p>
         </motion.div>
 
@@ -212,7 +247,7 @@ export function ProjectsSection() {
             href="#contact"
             className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold rounded-full transition-all hover:scale-105"
           >
-            Let's Work Together
+            Let&apos;s Work Together
           </a>
         </motion.div>
       </div>

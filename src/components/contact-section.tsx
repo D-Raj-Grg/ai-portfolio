@@ -58,7 +58,7 @@ export function ContactSection() {
             Get In <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Touch</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            I'm always open to discussing new projects, creative ideas, or
+            I&apos;m always open to discussing new projects, creative ideas, or
             opportunities to be part of your vision.
           </p>
         </motion.div>
@@ -106,7 +106,7 @@ export function ContactSection() {
           >
             <Card className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm border-white/10 p-8">
               <h3 className="text-2xl font-bold text-white mb-4">
-                Let's Work Together
+                Let&apos;s Work Together
               </h3>
               <p className="text-slate-400 mb-6">
                 Whether you have a project in mind or just want to chat about

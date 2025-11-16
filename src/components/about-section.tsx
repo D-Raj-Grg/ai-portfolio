@@ -101,11 +101,11 @@ export function AboutSection() {
                     <p>
                       I&apos;m the kind of person who gets excited about shaving 3 seconds off a
                       page load time or refactoring messy code into something clean and elegant.
-                      The technical challenges—architecting scalable systems, optimizing performance,
-                      integrating AI—that&apos;s what keeps me up at night (in a good way).
+                      The technical challenges architecting scalable systems, optimizing performance,
+                      integrating AI that&apos;s what keeps me up at night (in a good way).
                     </p>
                     <p>
-                      These days, I&apos;m all-in on Next.js, React, TypeScript, and AI tools like
+                      These days, I&apos;m all in on Next.js, React, TypeScript, and AI tools like
                       OpenAI and Claude. Building the future, one feature at a time.
                     </p>
                   </div>

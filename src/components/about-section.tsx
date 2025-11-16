@@ -65,7 +65,7 @@ export function AboutSection() {
                   </div>
                   <div className="space-y-4 text-slate-300 leading-relaxed">
                     <p>
-                      My coding journey started way back in school—around 10th grade—when I first
+                      My coding journey started way back in school around 10th grade when I first
                       discovered Blogspot. I didn&apos;t know anything about coding, but creating small
                       websites felt magical. That curiosity pushed me to WordPress, where I learned
                       customization, hosting, and design.
@@ -73,7 +73,7 @@ export function AboutSection() {
                     <p>
                       Slowly, I moved from just clicking buttons to actually writing code… and
                       that&apos;s where everything changed. From those simple beginnings, I kept building,
-                      learning, and experimenting—bit by bit—until coding became my career.
+                      learning, and experimenting bit by bit until coding became my career.
                     </p>
                     <p>
                       Over the past 5+ years, I&apos;ve had the privilege of contributing to products
@@ -93,7 +93,7 @@ export function AboutSection() {
                   <div className="space-y-4 text-slate-300 leading-relaxed">
                     <p>
                       What really excites me? The intersection of AI and user experience. I love
-                      building things that don&apos;t just work—they feel intelligent and intuitive.
+                      building things that don&apos;t just work they feel intelligent and intuitive.
                       Whether it&apos;s a chatbot that actually understands context or a workflow
                       builder that makes automation simple, I want users to think &quot;wow, this
                       just works.&quot;

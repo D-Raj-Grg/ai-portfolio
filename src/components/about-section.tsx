@@ -41,7 +41,7 @@ export function AboutSection() {
             About <GradientText>Me</GradientText>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            From curious developer to senior engineer building AI-powered solutions
+            From building simple Blogspot sites in 10th grade to architecting AI-powered applications
           </p>
         </motion.div>
 
@@ -65,15 +65,20 @@ export function AboutSection() {
                   </div>
                   <div className="space-y-4 text-slate-300 leading-relaxed">
                     <p>
-                      I started my development journey in 2020, driven by a passion for creating
-                      seamless digital experiences. What began with WordPress development quickly
-                      evolved into a deep dive into modern frontend engineering and AI-powered
-                      applications.
+                      My coding journey started way back in school—around 10th grade—when I first
+                      discovered Blogspot. I didn&apos;t know anything about coding, but creating small
+                      websites felt magical. That curiosity pushed me to WordPress, where I learned
+                      customization, hosting, and design.
                     </p>
                     <p>
-                      Over the past 5+ years, I&apos;ve had the privilege of contributing to some of
-                      the most popular WordPress products used by millions, while simultaneously
-                      exploring the cutting edge of AI and SaaS development with Next.js and React.
+                      Slowly, I moved from just clicking buttons to actually writing code… and
+                      that&apos;s where everything changed. From those simple beginnings, I kept building,
+                      learning, and experimenting—bit by bit—until coding became my career.
+                    </p>
+                    <p>
+                      Over the past 5+ years, I&apos;ve had the privilege of contributing to products
+                      like Astra Theme (used by 7M+ websites) and building AI-powered applications
+                      that solve real problems for real people.
                     </p>
                   </div>
                 </div>
@@ -87,15 +92,21 @@ export function AboutSection() {
                   </div>
                   <div className="space-y-4 text-slate-300 leading-relaxed">
                     <p>
-                      I&apos;m fascinated by the intersection of AI and user experience. Building
-                      applications that are not just functional, but intelligent and intuitive,
-                      is what gets me excited every day.
+                      What really excites me? The intersection of AI and user experience. I love
+                      building things that don&apos;t just work—they feel intelligent and intuitive.
+                      Whether it&apos;s a chatbot that actually understands context or a workflow
+                      builder that makes automation simple, I want users to think &quot;wow, this
+                      just works.&quot;
                     </p>
                     <p>
-                      Whether it&apos;s architecting scalable workflows with ReactFlow, optimizing
-                      performance to achieve sub-2-second page loads, or implementing AI-powered
-                      features that genuinely help users - I thrive on solving complex technical
-                      challenges with elegant solutions.
+                      I&apos;m the kind of person who gets excited about shaving 3 seconds off a
+                      page load time or refactoring messy code into something clean and elegant.
+                      The technical challenges—architecting scalable systems, optimizing performance,
+                      integrating AI—that&apos;s what keeps me up at night (in a good way).
+                    </p>
+                    <p>
+                      These days, I&apos;m all-in on Next.js, React, TypeScript, and AI tools like
+                      OpenAI and Claude. Building the future, one feature at a time.
                     </p>
                   </div>
                 </div>

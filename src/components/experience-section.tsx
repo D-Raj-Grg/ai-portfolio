@@ -99,8 +99,8 @@ export function ExperienceSection() {
             >
               <Card className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm border-white/10 p-6 hover:border-white/20 transition-all duration-300 group">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${exp.color} opacity-20 group-hover:opacity-30 transition-opacity flex items-center justify-center flex-shrink-0`}>
-                    <Briefcase className="w-6 h-6 text-white" />
+                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${exp.color} opacity-80 group-hover:opacity-100 transition-all flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl`}>
+                    <Briefcase className="w-6 h-6 text-white drop-shadow-lg" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-start justify-between gap-4 mb-2">

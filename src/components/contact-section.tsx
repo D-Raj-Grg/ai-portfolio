@@ -82,8 +82,8 @@ export function ContactSection() {
                   }}
                 >
                   <div className="flex items-center gap-4">
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${contact.color} opacity-20 group-hover:opacity-30 transition-opacity flex items-center justify-center flex-shrink-0`}>
-                      <contact.icon className="w-6 h-6 text-white" />
+                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${contact.color} opacity-80 group-hover:opacity-100 transition-all flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl`}>
+                      <contact.icon className="w-6 h-6 text-white drop-shadow-lg" />
                     </div>
                     <div>
                       <h3 className="text-sm font-semibold text-slate-400 mb-1">

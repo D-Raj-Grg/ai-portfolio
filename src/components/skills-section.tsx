@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BentoGrid, BentoCard } from "./magicui/bento-grid";
+import { BentoCard } from "./magicui/bento-grid";
 import { Badge } from "./ui/badge";
 import {
   Code2,
@@ -130,7 +130,7 @@ export function SkillsSection() {
           </p>
         </motion.div>
 
-        <BentoGrid className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}
@@ -138,6 +138,7 @@ export function SkillsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
+              className="h-full"
             >
               <BentoCard
                 Icon={category.icon}
@@ -145,6 +146,7 @@ export function SkillsSection() {
                 background={
                   <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-10`} />
                 }
+                className="h-full"
               >
                 <div className="space-y-3 mt-2">
                   {category.skills.map((skill) => (
@@ -168,7 +170,7 @@ export function SkillsSection() {
               </BentoCard>
             </motion.div>
           ))}
-        </BentoGrid>
+        </div>
 
         {/* Legend */}
         <motion.div

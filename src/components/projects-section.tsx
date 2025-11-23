@@ -19,6 +19,50 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "OttoKit",
+    description: "No-code AI automation platform",
+    longDescription:
+      "Formerly SureTriggers - Build intelligent automation workflows with AI-powered triggers and actions. Features an interactive canvas builder powered by ReactFlow v12, enabling teams to create complex workflows without code.",
+    icon: Zap,
+    link: "https://ottokit.com",
+    tags: ["AI Automation", "React", "No-Code", "SaaS"],
+    color: "#d2f059",
+    gradient: "from-green-400/20 to-purple-600/20",
+  },
+  {
+    title: "Sigmize",
+    description: "AI-powered A/B testing & optimization",
+    longDescription:
+      "Intelligent experimentation platform that uses machine learning to identify winning variations faster. Run AI-assisted experiments with automated statistical analysis and predictive insights for data-driven optimization.",
+    icon: Target,
+    link: "https://sigmize.com",
+    tags: ["AI Testing", "ML Analytics", "Optimization"],
+    color: "#005f5a",
+    gradient: "from-teal-500/20 to-cyan-500/20",
+  },
+  {
+    title: "SureCart",
+    description: "Modern checkout built with AI insights",
+    longDescription:
+      "Next-generation e-commerce platform built with Next.js 14. Leverages AI-driven analytics and smart payment optimization to deliver lightning-fast checkout experiences with intelligent cart abandonment recovery.",
+    icon: ShoppingCart,
+    link: "https://surecart.com",
+    tags: ["Next.js", "AI Commerce", "Payments"],
+    color: "#00824c",
+    gradient: "from-emerald-500/20 to-green-600/20",
+  },
+  {
+    title: "Astra Theme",
+    description: "The world's most popular WordPress theme",
+    longDescription:
+      "Fast, lightweight & customizable WordPress theme trusted by 7M+ websites worldwide. Engineered with performance-first architecture, intelligent design systems, and seamless page builder integration for limitless customization.",
+    icon: Palette,
+    link: "https://wpastra.com",
+    tags: ["WordPress", "Performance", "7M+ Active"],
+    color: "#7143e3",
+    gradient: "from-purple-500/20 to-yellow-500/20",
+  },
+  {
     title: "AI Chatbot Platform",
     description: "Next-Gen Conversational AI Experience",
     longDescription:
@@ -50,50 +94,6 @@ const projects: Project[] = [
     tags: ["Claude AI", "Next.js", "RAG", "10MB Max"],
     color: "#8b5cf6",
     gradient: "from-violet-500/20 to-fuchsia-500/20",
-  },
-  {
-    title: "Astra Theme",
-    description: "The world's most popular WordPress theme",
-    longDescription:
-      "Fast, lightweight & customizable WordPress theme trusted by 7M+ websites worldwide. Engineered with performance-first architecture, intelligent design systems, and seamless page builder integration for limitless customization.",
-    icon: Palette,
-    link: "https://wpastra.com",
-    tags: ["WordPress", "Performance", "7M+ Active"],
-    color: "#7143e3",
-    gradient: "from-purple-500/20 to-yellow-500/20",
-  },
-  {
-    title: "OttoKit",
-    description: "No-code AI automation platform",
-    longDescription:
-      "Formerly SureTriggers - Build intelligent automation workflows with AI-powered triggers and actions. Features an interactive canvas builder powered by ReactFlow v12, enabling teams to create complex workflows without code.",
-    icon: Zap,
-    link: "https://ottokit.com",
-    tags: ["AI Automation", "React", "No-Code", "SaaS"],
-    color: "#d2f059",
-    gradient: "from-green-400/20 to-purple-600/20",
-  },
-  {
-    title: "SureCart",
-    description: "Modern checkout built with AI insights",
-    longDescription:
-      "Next-generation e-commerce platform built with Next.js 14. Leverages AI-driven analytics and smart payment optimization to deliver lightning-fast checkout experiences with intelligent cart abandonment recovery.",
-    icon: ShoppingCart,
-    link: "https://surecart.com",
-    tags: ["Next.js", "AI Commerce", "Payments"],
-    color: "#00824c",
-    gradient: "from-emerald-500/20 to-green-600/20",
-  },
-  {
-    title: "Sigmize",
-    description: "AI-powered A/B testing & optimization",
-    longDescription:
-      "Intelligent experimentation platform that uses machine learning to identify winning variations faster. Run AI-assisted experiments with automated statistical analysis and predictive insights for data-driven optimization.",
-    icon: Target,
-    link: "https://sigmize.com",
-    tags: ["AI Testing", "ML Analytics", "Optimization"],
-    color: "#005f5a",
-    gradient: "from-teal-500/20 to-cyan-500/20",
   },
 ];
 

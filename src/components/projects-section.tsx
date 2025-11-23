@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Zap, ShoppingCart, Target, Palette, FileText, Sparkles, MessageSquare, Shield } from "lucide-react";
+import { ExternalLink, Zap, ShoppingCart, Target, Palette, FileText, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen } from "lucide-react";
 import { BentoGrid, BentoCard } from "./magicui/bento-grid";
 import { GradientText } from "./magicui/animated-text";
 import { Badge } from "./ui/badge";
@@ -63,15 +63,15 @@ const projects: Project[] = [
     gradient: "from-purple-500/20 to-yellow-500/20",
   },
   {
-    title: "AI Chatbot Platform",
-    description: "Next-Gen Conversational AI Experience",
+    title: "ChefMate",
+    description: "AI Recipe Generator",
     longDescription:
-      "Advanced AI chatbot powered by OpenAI GPT-4o with real-time web search, multi-file handling (images, documents), and transparent reasoning display. Features beautiful responsive UI with dark/light themes, source citations, and seamless interactions. Built with Next.js 16, React 19, and shadcn/ui.",
-    icon: MessageSquare,
-    link: "https://raj-ai-chatbot.vercel.app/",
-    tags: ["GPT-4o", "Web Search", "Next.js 16", "React 19"],
-    color: "#10a37f",
-    gradient: "from-emerald-500/20 to-teal-500/20",
+      "Turn ingredients into delicious meals. An AI kitchen companion that generates personalized recipes from available ingredients, reducing food waste and making cooking accessible. Includes dietary customization, instant recipe generation, and PWA support for mobile access.",
+    icon: ChefHat,
+    link: "https://ai-recipe-generator-raj.vercel.app/",
+    tags: ["AI/ML", "Next.js", "PWA", "Recipe Gen"],
+    color: "#f97316",
+    gradient: "from-orange-500/20 to-red-500/20",
   },
   {
     title: "NGLFS",
@@ -83,6 +83,39 @@ const projects: Project[] = [
     tags: ["Next.js", "Anonymous", "Privacy", "Analytics"],
     color: "#3b82f6",
     gradient: "from-blue-500/20 to-indigo-500/20",
+  },
+  {
+    title: "Study Buddy",
+    description: "AI-Powered Study Companion",
+    longDescription:
+      "Study smarter, not harder. Transform educational content into interactive learning tools with AI-generated quizzes, smart flashcards with spaced repetition, and concept explanations with visual breakdowns and analogies for better understanding.",
+    icon: BookOpen,
+    link: "https://ai-study-buddy-raj.vercel.app/",
+    tags: ["AI/ML", "Next.js", "TypeScript", "Education"],
+    color: "#a855f7",
+    gradient: "from-purple-500/20 to-pink-500/20",
+  },
+  {
+    title: "AI Chatbot Platform",
+    description: "Next-Gen Conversational AI Experience",
+    longDescription:
+      "Advanced AI chatbot powered by OpenAI GPT-4o with real-time web search, multi-file handling (images, documents), and transparent reasoning display. Features beautiful responsive UI with dark/light themes, source citations, and seamless interactions. Built with Next.js 16, React 19, and shadcn/ui.",
+    icon: MessageSquare,
+    link: "https://raj-ai-chatbot.vercel.app/",
+    tags: ["GPT-4o", "Web Search", "Next.js 16", "React 19"],
+    color: "#10a37f",
+    gradient: "from-emerald-500/20 to-teal-500/20",
+  },
+  {
+    title: "LinguaChat",
+    description: "AI-Powered Language Learning",
+    longDescription:
+      "Master any language through conversation. An AI companion that enables users to practice real dialogue in 5+ languages, receive instant grammar corrections, and build confidence with adaptive difficulty scaling. Features scenario-based practice and comprehensive progress tracking.",
+    icon: Languages,
+    link: "https://ai-language-learning-raj.vercel.app/",
+    tags: ["OpenAI", "Next.js", "TypeScript", "5+ Languages"],
+    color: "#3b82f6",
+    gradient: "from-blue-500/20 to-cyan-500/20",
   },
   {
     title: "PDF Q&A AI SaaS",

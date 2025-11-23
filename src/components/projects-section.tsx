@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen } from "lucide-react";
+import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen, Video } from "lucide-react";
 import { BentoGrid, BentoCard } from "./magicui/bento-grid";
 import { GradientText } from "./magicui/animated-text";
 import { Badge } from "./ui/badge";
@@ -17,6 +17,7 @@ interface Project {
   tags: string[];
   color: string;
   gradient: string;
+  badge?: string;
 }
 
 const projects: Project[] = [
@@ -130,6 +131,18 @@ const projects: Project[] = [
     color: "#8b5cf6",
     gradient: "from-violet-500/20 to-fuchsia-500/20",
   },
+  {
+    title: "ReatorAI",
+    description: "AI-Powered Content Creation Platform",
+    longDescription:
+      "Streamline your content creation workflow with AI. ReatorAI transforms viral video research from 60 minutes to 10 minutes. Features outlier detection for 2x+ better performing videos, channel watchlist organization, and AI-powered script generation using 9 hook formats and 7 storytelling frameworks. Perfect for YouTube Shorts, TikTok, and Instagram Reels creators.",
+    icon: Video,
+    link: "https://reatorai.vercel.app/",
+    tags: ["AI", "Next.js", "Content Creation", "Video Analytics"],
+    color: "#f59e0b",
+    gradient: "from-amber-500/20 to-orange-500/20",
+    badge: "On-going",
+  },
 ];
 
 export function ProjectsSection() {
@@ -193,9 +206,16 @@ export function ProjectsSection() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all">
-                      {project.title}
-                    </h3>
+                    <div className="flex items-center gap-2 mb-2">
+                      <h3 className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all">
+                        {project.title}
+                      </h3>
+                      {project.badge && (
+                        <Badge className="bg-amber-500/20 text-amber-400 border-amber-500/30 text-xs px-2 py-0.5">
+                          {project.badge}
+                        </Badge>
+                      )}
+                    </div>
 
                     {/* Description */}
                     <p className="text-slate-300 mb-3 font-medium text-base">

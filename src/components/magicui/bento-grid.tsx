@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { ReactNode, ComponentType } from "react";
 import { cn } from "@/lib/utils";
+import { LucideProps } from "lucide-react";
 
 interface BentoGridProps {
   children: ReactNode;
@@ -26,7 +27,7 @@ interface BentoCardProps {
   children: ReactNode;
   className?: string;
   background?: ReactNode;
-  Icon?: any;
+  Icon?: ComponentType<LucideProps>;
   title?: string;
   description?: string;
 }

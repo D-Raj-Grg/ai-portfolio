@@ -1,16 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Zap, ShoppingCart, Target, Palette, FileText, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen } from "lucide-react";
+import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen } from "lucide-react";
 import { BentoGrid, BentoCard } from "./magicui/bento-grid";
 import { GradientText } from "./magicui/animated-text";
 import { Badge } from "./ui/badge";
+import { ComponentType } from "react";
+import { LucideProps } from "lucide-react";
 
 interface Project {
   title: string;
   description: string;
   longDescription: string;
-  icon: any;
+  icon: ComponentType<LucideProps>;
   link: string;
   tags: string[];
   color: string;
@@ -147,7 +149,7 @@ export function ProjectsSection() {
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
             Transforming ideas into powerful digital experiences. Here are some
-            of the impactful projects I've contributed to.
+            of the impactful projects I&apos;ve contributed to.
           </p>
         </motion.div>
 
@@ -245,7 +247,7 @@ export function ProjectsSection() {
             href="#contact"
             className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold rounded-full transition-all hover:scale-105"
           >
-            Let's Work Together
+            Let&apos;s Work Together
           </a>
         </motion.div>
       </div>

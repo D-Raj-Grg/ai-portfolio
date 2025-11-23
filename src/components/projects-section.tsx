@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen } from "lucide-react";
+import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen, Video } from "lucide-react";
 import { BentoGrid, BentoCard } from "./magicui/bento-grid";
 import { GradientText } from "./magicui/animated-text";
 import { Badge } from "./ui/badge";
@@ -17,9 +17,87 @@ interface Project {
   tags: string[];
   color: string;
   gradient: string;
+  badge?: string;
 }
 
 const projects: Project[] = [
+  {
+    title: "OttoKit",
+    description: "No-code AI automation platform",
+    longDescription:
+      "Formerly SureTriggers - Build intelligent automation workflows with AI-powered triggers and actions. Features an interactive canvas builder powered by ReactFlow v12, enabling teams to create complex workflows without code.",
+    icon: Zap,
+    link: "https://ottokit.com",
+    tags: ["AI Automation", "React", "No-Code", "SaaS"],
+    color: "#d2f059",
+    gradient: "from-green-400/20 to-purple-600/20",
+  },
+  {
+    title: "Sigmize",
+    description: "AI-powered A/B testing & optimization",
+    longDescription:
+      "Intelligent experimentation platform that uses machine learning to identify winning variations faster. Run AI-assisted experiments with automated statistical analysis and predictive insights for data-driven optimization.",
+    icon: Target,
+    link: "https://sigmize.com",
+    tags: ["AI Testing", "ML Analytics", "Optimization"],
+    color: "#005f5a",
+    gradient: "from-teal-500/20 to-cyan-500/20",
+  },
+  {
+    title: "SureCart",
+    description: "Modern checkout built with AI insights",
+    longDescription:
+      "Next-generation e-commerce platform built with Next.js 14. Leverages AI-driven analytics and smart payment optimization to deliver lightning-fast checkout experiences with intelligent cart abandonment recovery.",
+    icon: ShoppingCart,
+    link: "https://surecart.com",
+    tags: ["Next.js", "AI Commerce", "Payments"],
+    color: "#00824c",
+    gradient: "from-emerald-500/20 to-green-600/20",
+  },
+  {
+    title: "Astra Theme",
+    description: "The world's most popular WordPress theme",
+    longDescription:
+      "Fast, lightweight & customizable WordPress theme trusted by 7M+ websites worldwide. Engineered with performance-first architecture, intelligent design systems, and seamless page builder integration for limitless customization.",
+    icon: Palette,
+    link: "https://wpastra.com",
+    tags: ["WordPress", "Performance", "7M+ Active"],
+    color: "#7143e3",
+    gradient: "from-purple-500/20 to-yellow-500/20",
+  },
+  {
+    title: "ChefMate",
+    description: "AI Recipe Generator",
+    longDescription:
+      "Turn ingredients into delicious meals. An AI kitchen companion that generates personalized recipes from available ingredients, reducing food waste and making cooking accessible. Includes dietary customization, instant recipe generation, and PWA support for mobile access.",
+    icon: ChefHat,
+    link: "https://ai-recipe-generator-raj.vercel.app/",
+    tags: ["AI/ML", "Next.js", "PWA", "Recipe Gen"],
+    color: "#f97316",
+    gradient: "from-orange-500/20 to-red-500/20",
+  },
+  {
+    title: "NGLFS",
+    description: "Anonymous Feedback, Zero Signup",
+    longDescription:
+      "Anonymous messaging platform that lets you receive honest feedback from friends without requiring them to sign up. Features a beautiful inbox interface with analytics dashboard, encrypted data storage, and hashed IP addresses for maximum privacy. 100% anonymous, ad-free experience with instant setup.",
+    icon: Shield,
+    link: "https://nglfs.vercel.app/",
+    tags: ["Next.js", "Anonymous", "Privacy", "Analytics"],
+    color: "#3b82f6",
+    gradient: "from-blue-500/20 to-indigo-500/20",
+  },
+  {
+    title: "Study Buddy",
+    description: "AI-Powered Study Companion",
+    longDescription:
+      "Study smarter, not harder. Transform educational content into interactive learning tools with AI-generated quizzes, smart flashcards with spaced repetition, and concept explanations with visual breakdowns and analogies for better understanding.",
+    icon: BookOpen,
+    link: "https://ai-study-buddy-raj.vercel.app/",
+    tags: ["AI/ML", "Next.js", "TypeScript", "Education"],
+    color: "#a855f7",
+    gradient: "from-purple-500/20 to-pink-500/20",
+  },
   {
     title: "AI Chatbot Platform",
     description: "Next-Gen Conversational AI Experience",
@@ -43,39 +121,6 @@ const projects: Project[] = [
     gradient: "from-blue-500/20 to-cyan-500/20",
   },
   {
-    title: "ChefMate",
-    description: "AI Recipe Generator",
-    longDescription:
-      "Turn ingredients into delicious meals. An AI kitchen companion that generates personalized recipes from available ingredients, reducing food waste and making cooking accessible. Includes dietary customization, instant recipe generation, and PWA support for mobile access.",
-    icon: ChefHat,
-    link: "https://ai-recipe-generator-raj.vercel.app/",
-    tags: ["AI/ML", "Next.js", "PWA", "Recipe Gen"],
-    color: "#f97316",
-    gradient: "from-orange-500/20 to-red-500/20",
-  },
-  {
-    title: "Study Buddy",
-    description: "AI-Powered Study Companion",
-    longDescription:
-      "Study smarter, not harder. Transform educational content into interactive learning tools with AI-generated quizzes, smart flashcards with spaced repetition, and concept explanations with visual breakdowns and analogies for better understanding.",
-    icon: BookOpen,
-    link: "https://ai-study-buddy-raj.vercel.app/",
-    tags: ["AI/ML", "Next.js", "TypeScript", "Education"],
-    color: "#a855f7",
-    gradient: "from-purple-500/20 to-pink-500/20",
-  },
-  {
-    title: "NGLFS",
-    description: "Anonymous Feedback, Zero Signup",
-    longDescription:
-      "Anonymous messaging platform that lets you receive honest feedback from friends without requiring them to sign up. Features a beautiful inbox interface with analytics dashboard, encrypted data storage, and hashed IP addresses for maximum privacy. 100% anonymous, ad-free experience with instant setup.",
-    icon: Shield,
-    link: "https://nglfs.vercel.app/",
-    tags: ["Next.js", "Anonymous", "Privacy", "Analytics"],
-    color: "#3b82f6",
-    gradient: "from-blue-500/20 to-indigo-500/20",
-  },
-  {
     title: "PDF Q&A AI SaaS",
     description: "Your PDF Documents, Now Interactive",
     longDescription:
@@ -87,48 +132,16 @@ const projects: Project[] = [
     gradient: "from-violet-500/20 to-fuchsia-500/20",
   },
   {
-    title: "Astra Theme",
-    description: "The world's most popular WordPress theme",
+    title: "ReatorAI",
+    description: "AI-Powered Content Creation Platform",
     longDescription:
-      "Fast, lightweight & customizable WordPress theme trusted by 7M+ websites worldwide. Engineered with performance-first architecture, intelligent design systems, and seamless page builder integration for limitless customization.",
-    icon: Palette,
-    link: "https://wpastra.com",
-    tags: ["WordPress", "Performance", "7M+ Active"],
-    color: "#7143e3",
-    gradient: "from-purple-500/20 to-yellow-500/20",
-  },
-  {
-    title: "OttoKit",
-    description: "No-code AI automation platform",
-    longDescription:
-      "Formerly SureTriggers - Build intelligent automation workflows with AI-powered triggers and actions. Features an interactive canvas builder powered by ReactFlow v12, enabling teams to create complex workflows without code.",
-    icon: Zap,
-    link: "https://ottokit.com",
-    tags: ["AI Automation", "React", "No-Code", "SaaS"],
-    color: "#d2f059",
-    gradient: "from-green-400/20 to-purple-600/20",
-  },
-  {
-    title: "SureCart",
-    description: "Modern checkout built with AI insights",
-    longDescription:
-      "Next-generation e-commerce platform built with Next.js 14. Leverages AI-driven analytics and smart payment optimization to deliver lightning-fast checkout experiences with intelligent cart abandonment recovery.",
-    icon: ShoppingCart,
-    link: "https://surecart.com",
-    tags: ["Next.js", "AI Commerce", "Payments"],
-    color: "#00824c",
-    gradient: "from-emerald-500/20 to-green-600/20",
-  },
-  {
-    title: "Sigmize",
-    description: "AI-powered A/B testing & optimization",
-    longDescription:
-      "Intelligent experimentation platform that uses machine learning to identify winning variations faster. Run AI-assisted experiments with automated statistical analysis and predictive insights for data-driven optimization.",
-    icon: Target,
-    link: "https://sigmize.com",
-    tags: ["AI Testing", "ML Analytics", "Optimization"],
-    color: "#005f5a",
-    gradient: "from-teal-500/20 to-cyan-500/20",
+      "Streamline your content creation workflow with AI. ReatorAI transforms viral video research from 60 minutes to 10 minutes. Features outlier detection for 2x+ better performing videos, channel watchlist organization, and AI-powered script generation using 9 hook formats and 7 storytelling frameworks. Perfect for YouTube Shorts, TikTok, and Instagram Reels creators.",
+    icon: Video,
+    link: "https://reatorai.vercel.app/",
+    tags: ["AI", "Next.js", "Content Creation", "Video Analytics"],
+    color: "#f59e0b",
+    gradient: "from-amber-500/20 to-orange-500/20",
+    badge: "On-going",
   },
 ];
 
@@ -193,9 +206,16 @@ export function ProjectsSection() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all">
-                      {project.title}
-                    </h3>
+                    <div className="flex items-center gap-2 mb-2">
+                      <h3 className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all">
+                        {project.title}
+                      </h3>
+                      {project.badge && (
+                        <Badge className="bg-amber-500/20 text-amber-400 border-amber-500/30 text-xs px-2 py-0.5">
+                          {project.badge}
+                        </Badge>
+                      )}
+                    </div>
 
                     {/* Description */}
                     <p className="text-slate-300 mb-3 font-medium text-base">

@@ -3,6 +3,7 @@ import { CursorTracker } from "@/components/cursor-tracker";
 import { FloatingNavbar } from "@/components/floating-navbar";
 import { HeroSection } from "@/components/hero-section";
 import { AboutSection } from "@/components/about-section";
+import { IntroVideoSection } from "@/components/intro-video-section";
 import { SkillsSection } from "@/components/skills-section";
 import { ProjectsSection } from "@/components/projects-section";
 import { GitHubStatsSection } from "@/components/github-stats-section";
@@ -28,6 +29,7 @@ export default function Home() {
       <main className="relative z-10">
         <HeroSection />
         <AboutSection />
+        <IntroVideoSection />
         <SkillsSection />
         <ProjectsSection />
         <GitHubStatsSection />

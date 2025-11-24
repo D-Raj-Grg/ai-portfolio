@@ -136,6 +136,19 @@
     animation: gradient 3s ease infinite;
   }
 
+  @keyframes ripple {
+    0%, 100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(0.9);
+    }
+  }
+
+  .animate-ripple {
+    animation: ripple 3s ease-in-out infinite;
+  }
+
   /* Smooth scrolling */
   html {
     scroll-behavior: smooth;

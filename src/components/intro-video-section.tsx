@@ -9,7 +9,12 @@ import { GradientText } from "./magicui/animated-text";
 export function IntroVideoSection() {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoId = "9bdd545eebde424d8e835f92c0f55f95";
-  const thumbnailUrl = `https://cdn.loom.com/sessions/thumbnails/${videoId}-with-play.gif`;
+
+  // Option 1: Use custom thumbnail image if you have one
+  // const thumbnailUrl = "/images/video-thumbnail.jpg";
+
+  // Option 2: Use beautiful gradient placeholder (current)
+  const thumbnailUrl = null;
 
   return (
     <section id="intro-video" className="py-20 relative overflow-hidden">
@@ -61,15 +66,53 @@ export function IntroVideoSection() {
               {!isPlaying ? (
                 // Thumbnail with Play Button
                 <div className="relative aspect-video cursor-pointer" onClick={() => setIsPlaying(true)}>
-                  {/* Thumbnail Image */}
-                  <img
-                    src={thumbnailUrl}
-                    alt="Video thumbnail"
-                    className="w-full h-full object-cover"
-                  />
+                  {/* Thumbnail Background */}
+                  {thumbnailUrl ? (
+                    <img
+                      src={thumbnailUrl}
+                      alt="Video thumbnail"
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    // Custom Gradient Placeholder
+                    <div className="w-full h-full bg-gradient-to-br from-slate-800 via-slate-900 to-black relative overflow-hidden">
+                      {/* Animated Background Pattern */}
+                      <div className="absolute inset-0 opacity-20">
+                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/30 via-purple-500/30 to-pink-500/30 animate-gradient bg-[length:200%_200%]"></div>
+                      </div>
+
+                      {/* Grid Pattern */}
+                      <div className="absolute inset-0 opacity-10" style={{
+                        backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+                        backgroundSize: '50px 50px'
+                      }}></div>
+
+                      {/* Content */}
+                      <div className="relative h-full flex flex-col items-center justify-center text-center px-8">
+                        <motion.div
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.6 }}
+                        >
+                          <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">
+                              Introduction Video
+                            </span>
+                          </h3>
+                          <p className="text-slate-300 text-lg mb-6">
+                            Discover my journey, skills, and passion
+                          </p>
+                          <div className="flex items-center justify-center gap-2 text-slate-400 text-sm">
+                            <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                            <span>Watch Now</span>
+                          </div>
+                        </motion.div>
+                      </div>
+                    </div>
+                  )}
 
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex items-center justify-center group/play">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-center justify-center group/play">
                     {/* Play Button */}
                     <motion.div
                       className="relative"
@@ -80,8 +123,8 @@ export function IntroVideoSection() {
                       <div className="absolute inset-0 bg-blue-500 rounded-full blur-2xl opacity-60 group-hover/play:opacity-100 transition-opacity"></div>
 
                       {/* Play Button */}
-                      <div className="relative w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl border-4 border-white/20 group-hover/play:border-white/40 transition-all">
-                        <Play className="w-8 h-8 text-white ml-1" fill="white" />
+                      <div className="relative w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl border-4 border-white/20 group-hover/play:border-white/40 transition-all">
+                        <Play className="w-8 h-8 md:w-10 md:h-10 text-white ml-1" fill="white" />
                       </div>
                     </motion.div>
 

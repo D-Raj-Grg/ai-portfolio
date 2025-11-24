@@ -10,11 +10,8 @@ export function IntroVideoSection() {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoId = "9bdd545eebde424d8e835f92c0f55f95";
 
-  // Option 1: Use custom thumbnail image if you have one
-  // const thumbnailUrl = "/images/video-thumbnail.jpg";
-
-  // Option 2: Use beautiful gradient placeholder (current)
-  const thumbnailUrl = null;
+  // Using Loom's JPG thumbnail
+  const thumbnailUrl = "https://cdn.loom.com/sessions/thumbnails/9bdd545eebde424d8e835f92c0f55f95-adcc6501e7c645dc.jpg";
 
   return (
     <section id="intro-video" className="py-20 relative overflow-hidden">

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { AnimatedText, GradientText } from "./magicui/animated-text";
 import { Sparkles } from "./magicui/sparkles";
 import { Button } from "./ui/button";
-import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone, FileDown } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -96,6 +96,17 @@ export function HeroSection() {
               asChild
             >
               <a href="#projects">View My Work</a>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white/20 hover:bg-white/10 text-white gap-2"
+              asChild
+            >
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                <FileDown className="w-4 h-4" />
+                Download Resume
+              </a>
             </Button>
           </motion.div>
 

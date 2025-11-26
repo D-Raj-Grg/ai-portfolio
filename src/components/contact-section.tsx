@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
-import { Mail, Phone, Linkedin, Github, MapPin } from "lucide-react";
+import { Mail, Phone, Linkedin, Github, MapPin, FileDown } from "lucide-react";
 
 const contactInfo = [
   {
@@ -132,6 +132,17 @@ export function ContactSection() {
                     rel="noopener noreferrer"
                   >
                     Connect on LinkedIn
+                  </a>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white/20 hover:bg-white/10 text-white gap-2"
+                  asChild
+                >
+                  <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                    <FileDown className="w-4 h-4" />
+                    Download Resume
                   </a>
                 </Button>
               </div>

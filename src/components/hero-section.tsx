@@ -77,14 +77,14 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex flex-wrap items-center justify-center gap-4 mb-12"
+            className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.5 }}
           >
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold px-8"
+              className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold px-8 w-full sm:w-auto"
               asChild
             >
               <a href="#contact">Get In Touch</a>
@@ -92,7 +92,7 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white/20 hover:bg-white/10 text-white"
+              className="border-white/20 hover:bg-white/10 text-white w-full sm:w-auto"
               asChild
             >
               <a href="#projects">View My Work</a>
@@ -100,7 +100,7 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white/20 hover:bg-white/10 text-white gap-2"
+              className="border-white/20 hover:bg-white/10 text-white gap-2 w-full sm:w-auto"
               asChild
             >
               <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">

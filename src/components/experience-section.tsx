@@ -97,34 +97,34 @@ export function ExperienceSection() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.5 }}
             >
-              <Card className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm border-white/10 p-6 hover:border-white/20 transition-all duration-300 group">
-                <div className="flex items-start gap-4 mb-4">
+              <Card className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm border-white/10 p-4 md:p-6 hover:border-white/20 transition-all duration-300 group overflow-hidden">
+                <div className="flex flex-col md:flex-row md:items-start gap-4 mb-4">
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${exp.color} opacity-80 group-hover:opacity-100 transition-all flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl`}>
                     <Briefcase className="w-6 h-6 text-white drop-shadow-lg" />
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-start justify-between gap-4 mb-2">
-                      <h3 className="text-2xl font-bold text-white">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
+                      <h3 className="text-xl md:text-2xl font-bold text-white break-words">
                         {exp.position}
                       </h3>
-                      <Badge variant="outline" className="border-blue-400/30 text-blue-300 bg-blue-500/10">
+                      <Badge variant="outline" className="border-blue-400/30 text-blue-300 bg-blue-500/10 flex-shrink-0 w-fit">
                         {exp.type}
                       </Badge>
                     </div>
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-slate-400 mb-3">
+                    <div className="flex flex-wrap items-center gap-2 md:gap-4 text-sm text-slate-400 mb-3">
                       <span className="font-semibold text-blue-400">
                         {exp.company}
                       </span>
                       <span className="flex items-center gap-1">
-                        <MapPin className="w-4 h-4" />
+                        <MapPin className="w-4 h-4 flex-shrink-0" />
                         {exp.location}
                       </span>
                       <span className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
+                        <Calendar className="w-4 h-4 flex-shrink-0" />
                         {exp.period}
                       </span>
                     </div>
-                    <p className="text-slate-300 mb-4">{exp.description}</p>
+                    <p className="text-slate-300 mb-4 break-words">{exp.description}</p>
 
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-white mb-2">
@@ -136,8 +136,8 @@ export function ExperienceSection() {
                             key={i}
                             className="text-sm text-slate-400 flex items-start gap-2"
                           >
-                            <span className="text-blue-400 mt-1">▸</span>
-                            <span>{achievement}</span>
+                            <span className="text-blue-400 mt-1 flex-shrink-0">▸</span>
+                            <span className="break-words">{achievement}</span>
                           </li>
                         ))}
                       </ul>

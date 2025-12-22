@@ -112,10 +112,10 @@ export function ContactSection() {
                 Whether you have a project in mind or just want to chat about
                 web development, feel free to reach out!
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold"
+                  className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold w-full sm:w-auto"
                   asChild
                 >
                   <a href="mailto:clixacom@gmail.com">Send an Email</a>
@@ -123,7 +123,7 @@ export function ContactSection() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white/20 hover:bg-white/10 text-white"
+                  className="border-white/20 hover:bg-white/10 text-white w-full sm:w-auto"
                   asChild
                 >
                   <a
@@ -137,7 +137,7 @@ export function ContactSection() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white/20 hover:bg-white/10 text-white gap-2"
+                  className="border-white/20 hover:bg-white/10 text-white gap-2 w-full sm:w-auto"
                   asChild
                 >
                   <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">

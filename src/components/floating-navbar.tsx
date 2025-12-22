@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { Home, User, Briefcase, FolderKanban, Wrench, Mail } from "lucide-react";
 
@@ -21,41 +20,12 @@ const navItems: NavItem[] = [
 ];
 
 export function FloatingNavbar() {
-  const [visible, setVisible] = useState(true);
-  const lastScrollYRef = useRef(0);
-
   const { scrollY } = useScroll();
   const backgroundColor = useTransform(
     scrollY,
     [0, 100],
-    ["rgba(15, 23, 42, 0.0)", "rgba(15, 23, 42, 0.8)"]
+    ["rgba(15, 23, 42, 0.0)", "rgba(15, 23, 42, 0.9)"]
   );
-
-  useEffect(() => {
-    let ticking = false;
-
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const currentScrollY = window.scrollY;
-
-          if (currentScrollY > lastScrollYRef.current && currentScrollY > 100) {
-            setVisible(false);
-          } else {
-            setVisible(true);
-          }
-
-          lastScrollYRef.current = currentScrollY;
-          ticking = false;
-        });
-
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <motion.nav
@@ -67,10 +37,7 @@ export function FloatingNavbar() {
       )}
       style={{ backgroundColor }}
       initial={{ y: -100, opacity: 0 }}
-      animate={{
-        y: visible ? 0 : -100,
-        opacity: visible ? 1 : 0,
-      }}
+      animate={{ y: 0, opacity: 1 }}
       transition={{
         type: "spring",
         stiffness: 260,

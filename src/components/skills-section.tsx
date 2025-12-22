@@ -178,19 +178,19 @@ export function SkillsSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.8, duration: 0.5 }}
-          className="mt-12 flex justify-center gap-6 text-sm"
+          className="mt-12 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 text-sm"
         >
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-green-500"></div>
-            <span className="text-slate-400">Expert - Production-ready, can architect systems</span>
+            <div className="w-3 h-3 rounded-full bg-green-500 flex-shrink-0"></div>
+            <span className="text-slate-400">Expert - Production-ready</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-            <span className="text-slate-400">Advanced - Strong proficiency, shipped multiple projects</span>
+            <div className="w-3 h-3 rounded-full bg-blue-500 flex-shrink-0"></div>
+            <span className="text-slate-400">Advanced - Strong proficiency</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-            <span className="text-slate-400">Intermediate - Working knowledge, actively learning</span>
+            <div className="w-3 h-3 rounded-full bg-yellow-500 flex-shrink-0"></div>
+            <span className="text-slate-400">Intermediate - Actively learning</span>
           </div>
         </motion.div>
       </div>

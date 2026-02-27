@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen, Video, Coins } from "lucide-react";
+import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen, Video, Coins, Building2 } from "lucide-react";
 import { BentoGrid, BentoCard } from "./magicui/bento-grid";
 import { GradientText } from "./magicui/animated-text";
 import { Badge } from "./ui/badge";
@@ -141,6 +141,17 @@ const projects: Project[] = [
     tags: ["Solidity", "Hardhat", "Wagmi v2", "Next.js 14"],
     color: "#38bdf8",
     gradient: "from-sky-500/20 to-indigo-500/20",
+  },
+  {
+    title: "PropChain",
+    description: "NFT Property Marketplace with Escrow & Yield",
+    longDescription:
+      "Decentralized property marketplace where users mint ERC-721 property NFTs, list them for sale, make escrow-backed offers, and earn passive PROP token yield. Four Solidity contracts (PropToken, PropertyNFT, PropertyMarketplace, PropertyYield) with 5% fee system, batch yield claiming, and full reentrancy protection. Deployed on Sepolia with 48 passing tests.",
+    icon: Building2,
+    link: "https://propchain-marketplace.vercel.app/",
+    tags: ["Solidity", "OpenZeppelin", "Wagmi v2", "Next.js 14"],
+    color: "#a855f7",
+    gradient: "from-purple-500/20 to-cyan-500/20",
   },
   {
     title: "ReatorAI",

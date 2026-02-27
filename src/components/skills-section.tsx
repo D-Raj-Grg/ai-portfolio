@@ -93,6 +93,7 @@ const skillCategories = [
     skills: [
       { name: "Solidity", years: "3+ years", level: "Advanced" as const },
       { name: "Hardhat", years: "3+ years", level: "Advanced" as const },
+      { name: "OpenZeppelin", years: "3+ years", level: "Advanced" as const },
       { name: "Wagmi/Viem", years: "3+ years", level: "Advanced" as const },
       { name: "RainbowKit", years: "3+ years", level: "Advanced" as const },
     ],

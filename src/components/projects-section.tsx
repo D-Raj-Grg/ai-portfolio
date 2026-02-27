@@ -110,28 +110,6 @@ const projects: Project[] = [
     gradient: "from-emerald-500/20 to-teal-500/20",
   },
   {
-    title: "LinguaChat",
-    description: "AI-Powered Language Learning",
-    longDescription:
-      "Master any language through conversation. An AI companion that enables users to practice real dialogue in 5+ languages, receive instant grammar corrections, and build confidence with adaptive difficulty scaling. Features scenario-based practice and comprehensive progress tracking.",
-    icon: Languages,
-    link: "https://ai-language-learning-raj.vercel.app/",
-    tags: ["OpenAI", "Next.js", "TypeScript", "5+ Languages"],
-    color: "#3b82f6",
-    gradient: "from-blue-500/20 to-cyan-500/20",
-  },
-  {
-    title: "PDF Q&A AI SaaS",
-    description: "Your PDF Documents, Now Interactive",
-    longDescription:
-      "Upload any PDF and ask questions in natural language. Powered by Claude AI for intelligent, contextual understanding. Get instant, accurate answers with source citations in under 5 seconds. Perfect for research, studying, and professional document analysis with 100% private & secure processing.",
-    icon: Sparkles,
-    link: "https://pdf-qna-ai-saas.vercel.app/",
-    tags: ["Claude AI", "Next.js", "RAG", "10MB Max"],
-    color: "#8b5cf6",
-    gradient: "from-violet-500/20 to-fuchsia-500/20",
-  },
-  {
     title: "StakeDApp",
     description: "ERC-20 Token Staking Platform",
     longDescription:
@@ -143,6 +121,17 @@ const projects: Project[] = [
     gradient: "from-sky-500/20 to-indigo-500/20",
   },
   {
+    title: "LinguaChat",
+    description: "AI-Powered Language Learning",
+    longDescription:
+      "Master any language through conversation. An AI companion that enables users to practice real dialogue in 5+ languages, receive instant grammar corrections, and build confidence with adaptive difficulty scaling. Features scenario-based practice and comprehensive progress tracking.",
+    icon: Languages,
+    link: "https://ai-language-learning-raj.vercel.app/",
+    tags: ["OpenAI", "Next.js", "TypeScript", "5+ Languages"],
+    color: "#3b82f6",
+    gradient: "from-blue-500/20 to-cyan-500/20",
+  },
+  {
     title: "PropChain",
     description: "NFT Property Marketplace with Escrow & Yield",
     longDescription:
@@ -152,6 +141,17 @@ const projects: Project[] = [
     tags: ["Solidity", "OpenZeppelin", "Wagmi v2", "Next.js 14"],
     color: "#a855f7",
     gradient: "from-purple-500/20 to-cyan-500/20",
+  },
+  {
+    title: "PDF Q&A AI SaaS",
+    description: "Your PDF Documents, Now Interactive",
+    longDescription:
+      "Upload any PDF and ask questions in natural language. Powered by Claude AI for intelligent, contextual understanding. Get instant, accurate answers with source citations in under 5 seconds. Perfect for research, studying, and professional document analysis with 100% private & secure processing.",
+    icon: Sparkles,
+    link: "https://pdf-qna-ai-saas.vercel.app/",
+    tags: ["Claude AI", "Next.js", "RAG", "10MB Max"],
+    color: "#8b5cf6",
+    gradient: "from-violet-500/20 to-fuchsia-500/20",
   },
   {
     title: "ReatorAI",

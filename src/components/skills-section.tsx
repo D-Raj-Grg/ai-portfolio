@@ -11,6 +11,7 @@ import {
   Globe,
   Boxes,
   Brain,
+  Coins,
 } from "lucide-react";
 
 interface Skill {
@@ -85,6 +86,17 @@ const skillCategories = [
       { name: "Agile/Scrum", years: "4+ years", level: "Advanced" as const },
     ],
     color: "from-yellow-500 to-amber-500",
+  },
+  {
+    title: "Web3 & Blockchain",
+    icon: Coins,
+    skills: [
+      { name: "Solidity", years: "1+ year", level: "Advanced" as const },
+      { name: "Hardhat", years: "1+ year", level: "Advanced" as const },
+      { name: "Wagmi/Viem", years: "1+ year", level: "Advanced" as const },
+      { name: "RainbowKit", years: "1+ year", level: "Intermediate" as const },
+    ],
+    color: "from-sky-500 to-indigo-500",
   },
   {
     title: "WordPress Ecosystem",

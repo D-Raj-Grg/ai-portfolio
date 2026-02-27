@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen, Video } from "lucide-react";
+import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen, Video, Coins } from "lucide-react";
 import { BentoGrid, BentoCard } from "./magicui/bento-grid";
 import { GradientText } from "./magicui/animated-text";
 import { Badge } from "./ui/badge";
@@ -130,6 +130,17 @@ const projects: Project[] = [
     tags: ["Claude AI", "Next.js", "RAG", "10MB Max"],
     color: "#8b5cf6",
     gradient: "from-violet-500/20 to-fuchsia-500/20",
+  },
+  {
+    title: "StakeDApp",
+    description: "ERC-20 Token Staking Platform",
+    longDescription:
+      "Full-stack DeFi staking application where users stake STK tokens and earn RWD rewards per second using a gas-efficient Synthetix-style reward distribution pattern. Features three Solidity smart contracts (StakingToken, RewardToken, StakingPool) with ReentrancyGuard protection, deployed on Sepolia. Polished glass-card UI with real-time reward accrual, toast notifications with block explorer links, and responsive design.",
+    icon: Coins,
+    link: "https://staking-dapp-stk.vercel.app/",
+    tags: ["Solidity", "Hardhat", "Wagmi v2", "Next.js 14"],
+    color: "#38bdf8",
+    gradient: "from-sky-500/20 to-indigo-500/20",
   },
   {
     title: "ReatorAI",

@@ -197,7 +197,7 @@ export function ProjectsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={index === 0 ? "md:col-span-2" : ""}
+              className={index === 0 || project.title === "StakeDApp" || project.title === "PropChain" ? "md:col-span-2" : ""}
             >
               <a
                 href={project.link}

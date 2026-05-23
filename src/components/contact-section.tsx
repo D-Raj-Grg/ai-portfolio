@@ -11,7 +11,7 @@ const contactInfo = [
     label: "Email",
     value: "clixacom@gmail.com",
     href: "mailto:clixacom@gmail.com",
-    color: "from-blue-500 to-cyan-500",
+    color: "from-amber-500 to-yellow-300",
   },
   {
     icon: Phone,
@@ -25,7 +25,7 @@ const contactInfo = [
     label: "LinkedIn",
     value: "linkedin.com/in/divyashwar",
     href: "https://www.linkedin.com/in/divyashwar",
-    color: "from-blue-600 to-blue-400",
+    color: "from-amber-600 to-amber-400",
   },
   {
     icon: Github,
@@ -55,7 +55,7 @@ export function ContactSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            Get In <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Touch</span>
+            Get In <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Touch</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
             I&apos;m always open to discussing new projects, creative ideas, or
@@ -115,7 +115,7 @@ export function ContactSection() {
               <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold w-full sm:w-auto"
+                  className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold w-full sm:w-auto"
                   asChild
                 >
                   <a href="mailto:clixacom@gmail.com">Send an Email</a>

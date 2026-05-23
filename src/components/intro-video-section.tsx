@@ -53,10 +53,10 @@ export function IntroVideoSection() {
           {/* Glow Effect Container */}
           <div className="relative group">
             {/* Outer Glow */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-2xl opacity-75 blur-xl group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-amber-600 via-orange-600 to-rose-400 rounded-2xl opacity-75 blur-xl group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
 
             {/* Inner Glow */}
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl opacity-50 blur-lg group-hover:opacity-75 transition duration-1000"></div>
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500 via-orange-500 to-rose-300 rounded-2xl opacity-50 blur-lg group-hover:opacity-75 transition duration-1000"></div>
 
             {/* Video Content */}
             <div className="relative bg-slate-900/90 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
@@ -75,7 +75,7 @@ export function IntroVideoSection() {
                     <div className="w-full h-full bg-gradient-to-br from-slate-800 via-slate-900 to-black relative overflow-hidden">
                       {/* Animated Background Pattern */}
                       <div className="absolute inset-0 opacity-20">
-                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/30 via-purple-500/30 to-pink-500/30 animate-gradient bg-[length:200%_200%]"></div>
+                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-amber-500/30 via-orange-500/30 to-rose-300/30 animate-gradient bg-[length:200%_200%]"></div>
                       </div>
 
                       {/* Grid Pattern */}
@@ -92,7 +92,7 @@ export function IntroVideoSection() {
                           transition={{ duration: 0.6 }}
                         >
                           <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">
+                            <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-rose-300 text-transparent bg-clip-text">
                               Introduction Video
                             </span>
                           </h3>
@@ -117,10 +117,10 @@ export function IntroVideoSection() {
                       whileTap={{ scale: 0.95 }}
                     >
                       {/* Play Button Glow */}
-                      <div className="absolute inset-0 bg-blue-500 rounded-full blur-2xl opacity-60 group-hover/play:opacity-100 transition-opacity"></div>
+                      <div className="absolute inset-0 bg-amber-500 rounded-full blur-2xl opacity-60 group-hover/play:opacity-100 transition-opacity"></div>
 
                       {/* Play Button */}
-                      <div className="relative w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl border-4 border-white/20 group-hover/play:border-white/40 transition-all">
+                      <div className="relative w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center shadow-2xl border-4 border-white/20 group-hover/play:border-white/40 transition-all">
                         <Play className="w-8 h-8 md:w-10 md:h-10 text-white ml-1" fill="white" />
                       </div>
                     </motion.div>
@@ -157,8 +157,8 @@ export function IntroVideoSection() {
           </div>
 
           {/* Decorative Elements */}
-          <div className="absolute -top-20 -left-20 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute -top-20 -left-20 w-40 h-40 bg-amber-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-orange-500/20 rounded-full blur-3xl"></div>
         </motion.div>
 
         {/* Additional Info */}

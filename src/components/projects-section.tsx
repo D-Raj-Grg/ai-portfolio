@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen, Video, Coins, Building2 } from "lucide-react";
+import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen, Video, Coins, Building2, Dumbbell } from "lucide-react";
 import { BentoGrid, BentoCard } from "./magicui/bento-grid";
 import { GradientText } from "./magicui/animated-text";
 import { Badge } from "./ui/badge";
@@ -31,6 +31,18 @@ const projects: Project[] = [
     tags: ["AI Automation", "React", "No-Code", "SaaS"],
     color: "#d2f059",
     gradient: "from-green-400/20 to-orange-600/20",
+  },
+  {
+    title: "GymTrack Pro",
+    description: "Native iOS Workout Tracker, Published on App Store",
+    longDescription:
+      "Shipped iOS app built end-to-end with SwiftUI and SwiftData, featuring a companion Apple Watch app, home screen widgets, and Live Activities on the Dynamic Island. Deeply integrated with HealthKit, CloudKit sync, Siri & App Intents, and Spotlight. Includes structured splits (PPL, Upper/Lower, Bro, Full Body, Arnold), smart set/rep/RPE logging, 1RM estimation (Epley), progress charts via Swift Charts, calendar heatmap, streaks, and CSV export. Source on GitHub: D-Raj-Grg/gymtrackpromax.",
+    icon: Dumbbell,
+    link: "https://apps.apple.com/us/app/gym-track-pro-lifter-log/id6762596384",
+    tags: ["SwiftUI", "SwiftData", "watchOS", "HealthKit", "App Store"],
+    color: "#fb923c",
+    gradient: "from-orange-500/20 to-amber-500/20",
+    badge: "Live on App Store",
   },
   {
     title: "Sigmize",

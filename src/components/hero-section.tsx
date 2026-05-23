@@ -21,7 +21,7 @@ export function HeroSection() {
             transition={{ duration: 0.5 }}
             className="mb-4"
           >
-            <span className="text-blue-400 font-mono text-sm md:text-base">
+            <span className="text-amber-400 font-mono text-sm md:text-base">
               Hi, my name is
             </span>
           </motion.div>
@@ -84,7 +84,7 @@ export function HeroSection() {
           >
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold px-8 w-full sm:w-auto"
+              className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold px-8 w-full sm:w-auto"
               asChild
             >
               <a href="#contact">Get In Touch</a>

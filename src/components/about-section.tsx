@@ -10,13 +10,13 @@ const highlights = [
     icon: Briefcase,
     title: "5+ Years",
     description: "Professional Experience",
-    color: "from-blue-500 to-cyan-500",
+    color: "from-amber-500 to-yellow-300",
   },
   {
     icon: Award,
     title: "7M+ Users",
     description: "Products I've Contributed To",
-    color: "from-purple-500 to-pink-500",
+    color: "from-orange-500 to-rose-300",
   },
   {
     icon: Code2,
@@ -58,8 +58,8 @@ export function AboutSection() {
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
-                      <Heart className="w-6 h-6 text-blue-400" />
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center">
+                      <Heart className="w-6 h-6 text-amber-400" />
                     </div>
                     <h3 className="text-2xl font-bold text-white">My Journey</h3>
                   </div>
@@ -85,8 +85,8 @@ export function AboutSection() {
 
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
-                      <Lightbulb className="w-6 h-6 text-purple-400" />
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500/20 to-rose-300/20 flex items-center justify-center">
+                      <Lightbulb className="w-6 h-6 text-orange-400" />
                     </div>
                     <h3 className="text-2xl font-bold text-white">What Drives Me</h3>
                   </div>

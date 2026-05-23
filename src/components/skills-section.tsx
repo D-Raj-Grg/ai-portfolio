@@ -30,7 +30,7 @@ const skillCategories = [
       { name: "TypeScript", years: "5+ years", level: "Expert" as const },
       { name: "JavaScript ES6+", years: "5+ years", level: "Expert" as const },
     ],
-    color: "from-blue-500 to-cyan-500",
+    color: "from-amber-500 to-yellow-300",
   },
   {
     title: "AI & Modern Tools",
@@ -41,7 +41,7 @@ const skillCategories = [
       { name: "RAG Systems", years: "1+ year", level: "Intermediate" as const },
       { name: "Framer Motion", years: "2+ years", level: "Advanced" as const },
     ],
-    color: "from-violet-500 to-purple-500",
+    color: "from-orange-600 to-orange-400",
   },
   {
     title: "Styling & Design",
@@ -52,7 +52,7 @@ const skillCategories = [
       { name: "CSS3/Responsive", years: "5+ years", level: "Expert" as const },
       { name: "shadcn/ui", years: "5+ years", level: "Expert" as const },
     ],
-    color: "from-purple-500 to-pink-500",
+    color: "from-orange-500 to-rose-300",
   },
   {
     title: "State & Data Management",
@@ -97,7 +97,7 @@ const skillCategories = [
       { name: "Wagmi/Viem", years: "3+ years", level: "Advanced" as const },
       { name: "RainbowKit", years: "3+ years", level: "Advanced" as const },
     ],
-    color: "from-sky-500 to-indigo-500",
+    color: "from-amber-500 to-orange-700",
   },
   {
     title: "WordPress Ecosystem",
@@ -107,7 +107,7 @@ const skillCategories = [
       { name: "Gutenberg Blocks", years: "3+ years", level: "Advanced" as const },
       { name: "Plugin Development", years: "4+ years", level: "Advanced" as const },
     ],
-    color: "from-indigo-500 to-violet-500",
+    color: "from-orange-700 to-orange-500",
   },
 ];
 
@@ -116,7 +116,7 @@ const getLevelColor = (level: string) => {
     case "Expert":
       return "bg-green-500/20 text-green-300 border-green-500/30";
     case "Advanced":
-      return "bg-blue-500/20 text-blue-300 border-blue-500/30";
+      return "bg-amber-500/20 text-amber-300 border-amber-500/30";
     case "Intermediate":
       return "bg-yellow-500/20 text-yellow-300 border-yellow-500/30";
     default:
@@ -136,7 +136,7 @@ export function SkillsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            Technical <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Skills</span>
+            Technical <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Skills</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
             Proven expertise across modern web technologies with hands-on experience and measurable impact
@@ -198,7 +198,7 @@ export function SkillsSection() {
             <span className="text-slate-400">Expert - Production-ready</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-blue-500 flex-shrink-0"></div>
+            <div className="w-3 h-3 rounded-full bg-amber-500 flex-shrink-0"></div>
             <span className="text-slate-400">Advanced - Strong proficiency</span>
           </div>
           <div className="flex items-center gap-2">

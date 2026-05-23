@@ -136,7 +136,7 @@ export function AnimatedGradientBackground() {
   return (
     <div className="fixed inset-0 -z-10">
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-blue-950 via-slate-900 to-purple-950"
+        className="absolute inset-0 bg-gradient-to-br from-amber-950 via-slate-900 to-orange-950"
         animate={{
           backgroundPosition: ["0% 0%", "100% 100%"],
         }}
@@ -147,7 +147,7 @@ export function AnimatedGradientBackground() {
         }}
       />
       <motion.div
-        className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-cyan-500/10 via-transparent to-purple-500/10"
+        className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-amber-300/10 via-transparent to-orange-500/10"
         animate={{
           opacity: [0.3, 0.6, 0.3],
         }}
@@ -157,7 +157,7 @@ export function AnimatedGradientBackground() {
           repeatType: "reverse",
         }}
       />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-600/20 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-600/20 via-transparent to-transparent" />
     </div>
   );
 }

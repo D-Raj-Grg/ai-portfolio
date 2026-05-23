@@ -28,7 +28,7 @@ const experiences = [
       "SureCart",
       "Sigmize",
     ],
-    color: "from-blue-500 to-cyan-500",
+    color: "from-amber-500 to-yellow-300",
   },
   {
     company: "VYK HealthCare Pvt. Ltd.",
@@ -47,7 +47,7 @@ const experiences = [
     ],
     technologies: ["WordPress", "PHP", "MySQL", "JavaScript", "REST APIs", "Webhooks"],
     projects: [],
-    color: "from-purple-500 to-pink-500",
+    color: "from-orange-500 to-rose-300",
   },
   {
     company: "Atomic House",
@@ -81,7 +81,7 @@ export function ExperienceSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            Work <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Experience</span>
+            Work <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Experience</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
             5+ years of professional experience building web applications
@@ -107,12 +107,12 @@ export function ExperienceSection() {
                       <h3 className="text-xl md:text-2xl font-bold text-white break-words">
                         {exp.position}
                       </h3>
-                      <Badge variant="outline" className="border-blue-400/30 text-blue-300 bg-blue-500/10 flex-shrink-0 w-fit">
+                      <Badge variant="outline" className="border-amber-400/30 text-amber-300 bg-amber-500/10 flex-shrink-0 w-fit">
                         {exp.type}
                       </Badge>
                     </div>
                     <div className="flex flex-wrap items-center gap-2 md:gap-4 text-sm text-slate-400 mb-3">
-                      <span className="font-semibold text-blue-400">
+                      <span className="font-semibold text-amber-400">
                         {exp.company}
                       </span>
                       <span className="flex items-center gap-1">
@@ -136,7 +136,7 @@ export function ExperienceSection() {
                             key={i}
                             className="text-sm text-slate-400 flex items-start gap-2"
                           >
-                            <span className="text-blue-400 mt-1 flex-shrink-0">▸</span>
+                            <span className="text-amber-400 mt-1 flex-shrink-0">▸</span>
                             <span className="break-words">{achievement}</span>
                           </li>
                         ))}
@@ -153,7 +153,7 @@ export function ExperienceSection() {
                             <Badge
                               key={tech}
                               variant="outline"
-                              className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-blue-400/30 text-blue-300"
+                              className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border-amber-400/30 text-amber-300"
                             >
                               {tech}
                             </Badge>

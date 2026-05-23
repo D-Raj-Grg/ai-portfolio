@@ -65,7 +65,7 @@ export function GitHubStatsSection() {
             href={`https://github.com/${username}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
+            className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 transition-colors"
           >
             <span>@{username}</span>
             <GitBranch className="w-4 h-4" />

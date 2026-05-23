@@ -30,7 +30,7 @@ const projects: Project[] = [
     link: "https://ottokit.com",
     tags: ["AI Automation", "React", "No-Code", "SaaS"],
     color: "#d2f059",
-    gradient: "from-green-400/20 to-purple-600/20",
+    gradient: "from-green-400/20 to-orange-600/20",
   },
   {
     title: "Sigmize",
@@ -41,7 +41,7 @@ const projects: Project[] = [
     link: "https://sigmize.com",
     tags: ["AI Testing", "ML Analytics", "Optimization"],
     color: "#005f5a",
-    gradient: "from-teal-500/20 to-cyan-500/20",
+    gradient: "from-amber-600/20 to-amber-300/20",
   },
   {
     title: "SureCart",
@@ -63,7 +63,7 @@ const projects: Project[] = [
     link: "https://wpastra.com",
     tags: ["WordPress", "Performance", "7M+ Active"],
     color: "#7143e3",
-    gradient: "from-purple-500/20 to-yellow-500/20",
+    gradient: "from-orange-500/20 to-yellow-500/20",
   },
   {
     title: "ChefMate",
@@ -85,7 +85,7 @@ const projects: Project[] = [
     link: "https://nglfs.vercel.app/",
     tags: ["Next.js", "Anonymous", "Privacy", "Analytics"],
     color: "#3b82f6",
-    gradient: "from-blue-500/20 to-indigo-500/20",
+    gradient: "from-amber-500/20 to-orange-700/20",
   },
   {
     title: "Study Buddy",
@@ -96,7 +96,7 @@ const projects: Project[] = [
     link: "https://ai-study-buddy-raj.vercel.app/",
     tags: ["AI/ML", "Next.js", "TypeScript", "Education"],
     color: "#a855f7",
-    gradient: "from-purple-500/20 to-pink-500/20",
+    gradient: "from-orange-500/20 to-rose-300/20",
   },
   {
     title: "AI Chatbot Platform",
@@ -107,7 +107,7 @@ const projects: Project[] = [
     link: "https://raj-ai-chatbot.vercel.app/",
     tags: ["GPT-4o", "Web Search", "Next.js 16", "React 19"],
     color: "#10a37f",
-    gradient: "from-emerald-500/20 to-teal-500/20",
+    gradient: "from-emerald-500/20 to-amber-300/20",
   },
   {
     title: "StakeDApp",
@@ -118,7 +118,7 @@ const projects: Project[] = [
     link: "https://staking-dapp-stk.vercel.app/",
     tags: ["Solidity", "Hardhat", "Wagmi v2", "Next.js 14"],
     color: "#38bdf8",
-    gradient: "from-sky-500/20 to-indigo-500/20",
+    gradient: "from-yellow-400/20 to-orange-700/20",
   },
   {
     title: "LinguaChat",
@@ -129,7 +129,7 @@ const projects: Project[] = [
     link: "https://ai-language-learning-raj.vercel.app/",
     tags: ["OpenAI", "Next.js", "TypeScript", "5+ Languages"],
     color: "#3b82f6",
-    gradient: "from-blue-500/20 to-cyan-500/20",
+    gradient: "from-amber-500/20 to-yellow-300/20",
   },
   {
     title: "PropChain",
@@ -140,7 +140,7 @@ const projects: Project[] = [
     link: "https://propchain-marketplace.vercel.app/",
     tags: ["Solidity", "OpenZeppelin", "Wagmi v2", "Next.js 14"],
     color: "#a855f7",
-    gradient: "from-purple-500/20 to-cyan-500/20",
+    gradient: "from-orange-500/20 to-amber-300/20",
   },
   {
     title: "PDF Q&A AI SaaS",
@@ -151,7 +151,7 @@ const projects: Project[] = [
     link: "https://pdf-qna-ai-saas.vercel.app/",
     tags: ["Claude AI", "Next.js", "RAG", "10MB Max"],
     color: "#8b5cf6",
-    gradient: "from-violet-500/20 to-fuchsia-500/20",
+    gradient: "from-orange-600/20 to-rose-400/20",
   },
   {
     title: "ReatorAI",
@@ -229,7 +229,7 @@ export function ProjectsSection() {
 
                     {/* Title */}
                     <div className="flex items-center gap-2 mb-2">
-                      <h3 className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all">
+                      <h3 className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-amber-400 group-hover:to-orange-400 transition-all">
                         {project.title}
                       </h3>
                       {project.badge && (
@@ -263,7 +263,7 @@ export function ProjectsSection() {
                     </div>
 
                     {/* Link */}
-                    <div className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-blue-400 group-hover:text-blue-300 transition-colors">
+                    <div className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-amber-400 group-hover:text-amber-300 transition-colors">
                       <span>Visit Project</span>
                       <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </div>
@@ -287,7 +287,7 @@ export function ProjectsSection() {
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold rounded-full transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold rounded-full transition-all hover:scale-105"
           >
             Let&apos;s Work Together
           </a>

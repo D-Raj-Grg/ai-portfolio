@@ -56,7 +56,7 @@ export function FloatingNavbar() {
               <item.icon className="w-5 h-5 md:hidden" />
               {/* Text - hidden on mobile, visible on desktop */}
               <span className="hidden md:inline">{item.name}</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-full transition-all duration-300" />
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-400 to-orange-400 group-hover:w-full transition-all duration-300" />
             </a>
           </li>
         ))}

@@ -11,21 +11,21 @@ const contactInfo = [
     label: "Email",
     value: "clixacom@gmail.com",
     href: "mailto:clixacom@gmail.com",
-    color: "from-amber-500 to-yellow-300",
+    color: "from-emerald-500 to-lime-300",
   },
   {
     icon: Phone,
     label: "Phone",
     value: "+91-9504358270",
     href: "tel:+919504358270",
-    color: "from-green-500 to-emerald-500",
+    color: "from-teal-500 to-emerald-400",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
     value: "linkedin.com/in/divyashwar",
     href: "https://www.linkedin.com/in/divyashwar",
-    color: "from-amber-600 to-amber-400",
+    color: "from-emerald-600 to-emerald-400",
   },
   {
     icon: Github,
@@ -39,7 +39,7 @@ const contactInfo = [
     label: "Location",
     value: "Mumbai, India",
     href: "#",
-    color: "from-red-500 to-orange-500",
+    color: "from-emerald-600 to-teal-400",
   },
 ];
 
@@ -55,7 +55,7 @@ export function ContactSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            Get In <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Touch</span>
+            Get In <span className="bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">Touch</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
             I&apos;m always open to discussing new projects, creative ideas, or
@@ -115,7 +115,7 @@ export function ContactSection() {
               <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold w-full sm:w-auto"
+                  className="bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white font-semibold w-full sm:w-auto"
                   asChild
                 >
                   <a href="mailto:clixacom@gmail.com">Send an Email</a>

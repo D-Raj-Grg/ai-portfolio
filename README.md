@@ -84,6 +84,10 @@ ai-portfolio/
 3. **OttoKit** - No-code AI automation platform
 4. **SureCart** - Next.js e-commerce with AI insights
 5. **Sigmize** - AI-powered A/B testing platform
+6. **ExtraHelper** - Multi-tenant restaurant management SaaS (Next.js + Supabase RLS)
+7. **ExtraHelper Mobile** - Flutter staff app for the ExtraHelper platform
+8. **Redeemic** - WordPress plugin turning AppSumo codes into Lemon Squeezy licenses
+9. **GymTrack Pro** - Native iOS workout tracker, live on the App Store
 
 ## 🚀 Getting Started
 
@@ -140,8 +144,9 @@ pnpm start
 
 ## 🎨 Color Palette
 
-- **Primary:** Blue (#3b82f6) to Purple (#a855f7) gradients
-- **Background:** Dark slate (#0f172a, #1e293b)
+- **Primary:** Emerald (#10b981) to Green (#22c55e) gradients
+- **Secondary:** Teal (#14b8a6) and Lime (#84cc16) for gradient variation
+- **Background:** Dark slate with emerald/green tint (#0f172a, #1e293b)
 - **Text:** White/Slate variations
 - **Accents:** Project-specific brand colors
 

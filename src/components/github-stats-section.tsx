@@ -24,18 +24,18 @@ const stats: GitHubStats[] = [
     icon: Star,
     label: "Total Stars",
     value: "100+",
-    color: "#eab308",
+    color: "#84cc16",
   },
   {
     icon: GitFork,
     label: "Repositories",
     value: "50+",
-    color: "#3b82f6",
+    color: "#14b8a6",
   },
   {
     icon: Users,
     label: "Followers",
-    color: "#a855f7",
+    color: "#10b981",
     value: "25+",
   },
 ];
@@ -65,7 +65,7 @@ export function GitHubStatsSection() {
             href={`https://github.com/${username}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 transition-colors"
+            className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors"
           >
             <span>@{username}</span>
             <GitBranch className="w-4 h-4" />
@@ -134,7 +134,7 @@ export function GitHubStatsSection() {
             {/* GitHub Contribution Graph Image */}
             <div className="relative w-full overflow-auto">
               <img
-                src={`https://ghchart.rshah.org/3b82f6/${username}`}
+                src={`https://ghchart.rshah.org/22c55e/${username}`}
                 alt="GitHub Contribution Graph"
                 className="w-full h-auto rounded-lg"
                 style={{ minWidth: "600px" }}
@@ -146,14 +146,14 @@ export function GitHubStatsSection() {
             <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="rounded-lg overflow-hidden">
                 <img
-                  src={`https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=radical&hide_border=true&bg_color=1e293b&title_color=3b82f6&icon_color=a855f7&text_color=e2e8f0`}
+                  src={`https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=radical&hide_border=true&bg_color=1e293b&title_color=34d399&icon_color=a3e635&text_color=e2e8f0`}
                   alt="GitHub Stats"
                   className="w-full h-auto"
                 />
               </div>
               <div className="rounded-lg overflow-hidden">
                 <img
-                  src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=radical&hide_border=true&bg_color=1e293b&title_color=3b82f6&text_color=e2e8f0`}
+                  src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=radical&hide_border=true&bg_color=1e293b&title_color=34d399&text_color=e2e8f0`}
                   alt="Top Languages"
                   className="w-full h-auto"
                 />
@@ -163,7 +163,7 @@ export function GitHubStatsSection() {
             {/* GitHub Streak */}
             <div className="mt-4 rounded-lg overflow-hidden">
               <img
-                src={`https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=radical&hide_border=true&background=1e293b&ring=3b82f6&fire=a855f7&currStreakLabel=3b82f6`}
+                src={`https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=radical&hide_border=true&background=1e293b&ring=34d399&fire=a3e635&currStreakLabel=34d399`}
                 alt="GitHub Streak"
                 className="w-full h-auto"
               />

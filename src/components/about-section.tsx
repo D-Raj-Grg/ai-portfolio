@@ -10,19 +10,19 @@ const highlights = [
     icon: Briefcase,
     title: "5+ Years",
     description: "Professional Experience",
-    color: "from-amber-500 to-yellow-300",
+    color: "from-emerald-500 to-lime-300",
   },
   {
     icon: Award,
     title: "7M+ Users",
     description: "Products I've Contributed To",
-    color: "from-orange-500 to-rose-300",
+    color: "from-green-500 to-teal-300",
   },
   {
     icon: Code2,
     title: "10+ Projects",
     description: "AI-Powered Applications",
-    color: "from-green-500 to-emerald-500",
+    color: "from-teal-500 to-emerald-400",
   },
 ];
 
@@ -58,8 +58,8 @@ export function AboutSection() {
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center">
-                      <Heart className="w-6 h-6 text-amber-400" />
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-500/20 to-green-500/20 flex items-center justify-center">
+                      <Heart className="w-6 h-6 text-emerald-400" />
                     </div>
                     <h3 className="text-2xl font-bold text-white">My Journey</h3>
                   </div>
@@ -85,8 +85,8 @@ export function AboutSection() {
 
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500/20 to-rose-300/20 flex items-center justify-center">
-                      <Lightbulb className="w-6 h-6 text-orange-400" />
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500/20 to-teal-300/20 flex items-center justify-center">
+                      <Lightbulb className="w-6 h-6 text-green-400" />
                     </div>
                     <h3 className="text-2xl font-bold text-white">What Drives Me</h3>
                   </div>
@@ -146,8 +146,8 @@ export function AboutSection() {
           >
             <Card className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm border-white/10 p-8">
               <div className="flex items-start gap-4">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center flex-shrink-0">
-                  <GraduationCap className="w-7 h-7 text-orange-400" />
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500/20 to-teal-500/20 flex items-center justify-center flex-shrink-0">
+                  <GraduationCap className="w-7 h-7 text-green-400" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">Education</h3>

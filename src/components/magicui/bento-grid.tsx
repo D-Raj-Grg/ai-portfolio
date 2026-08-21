@@ -57,8 +57,8 @@ export function BentoCard({
       )}
       <div className="relative z-10">
         {Icon && (
-          <div className="mb-4 w-12 h-12 rounded-lg bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center">
-            <Icon className="w-6 h-6 text-amber-400" />
+          <div className="mb-4 w-12 h-12 rounded-lg bg-gradient-to-br from-emerald-500/20 to-green-500/20 flex items-center justify-center">
+            <Icon className="w-6 h-6 text-emerald-400" />
           </div>
         )}
         {title && (

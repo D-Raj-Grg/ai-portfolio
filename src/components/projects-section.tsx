@@ -30,7 +30,7 @@ const projects: Project[] = [
     link: "https://ottokit.com",
     tags: ["AI Automation", "React", "No-Code", "SaaS"],
     color: "#d2f059",
-    gradient: "from-green-400/20 to-orange-600/20",
+    gradient: "from-lime-400/20 to-green-600/20",
   },
   {
     title: "GymTrack Pro",
@@ -41,7 +41,7 @@ const projects: Project[] = [
     link: "https://apps.apple.com/us/app/gym-track-pro-lifter-log/id6762596384",
     tags: ["SwiftUI", "SwiftData", "watchOS", "HealthKit", "App Store"],
     color: "#fb923c",
-    gradient: "from-orange-500/20 to-amber-500/20",
+    gradient: "from-green-500/20 to-emerald-500/20",
     badge: "Live on App Store",
   },
   {
@@ -53,7 +53,7 @@ const projects: Project[] = [
     link: "https://sigmize.com",
     tags: ["AI Testing", "ML Analytics", "Optimization"],
     color: "#005f5a",
-    gradient: "from-amber-600/20 to-amber-300/20",
+    gradient: "from-emerald-600/20 to-emerald-300/20",
   },
   {
     title: "SureCart",
@@ -75,7 +75,7 @@ const projects: Project[] = [
     link: "https://wpastra.com",
     tags: ["WordPress", "Performance", "7M+ Active"],
     color: "#7143e3",
-    gradient: "from-orange-500/20 to-yellow-500/20",
+    gradient: "from-green-500/20 to-lime-500/20",
   },
   {
     title: "ChefMate",
@@ -86,7 +86,7 @@ const projects: Project[] = [
     link: "https://ai-recipe-generator-raj.vercel.app/",
     tags: ["AI/ML", "Next.js", "PWA", "Recipe Gen"],
     color: "#f97316",
-    gradient: "from-orange-500/20 to-red-500/20",
+    gradient: "from-green-500/20 to-teal-500/20",
   },
   {
     title: "NGLFS",
@@ -97,7 +97,7 @@ const projects: Project[] = [
     link: "https://nglfs.vercel.app/",
     tags: ["Next.js", "Anonymous", "Privacy", "Analytics"],
     color: "#3b82f6",
-    gradient: "from-amber-500/20 to-orange-700/20",
+    gradient: "from-emerald-500/20 to-green-700/20",
   },
   {
     title: "Study Buddy",
@@ -108,7 +108,7 @@ const projects: Project[] = [
     link: "https://ai-study-buddy-raj.vercel.app/",
     tags: ["AI/ML", "Next.js", "TypeScript", "Education"],
     color: "#a855f7",
-    gradient: "from-orange-500/20 to-rose-300/20",
+    gradient: "from-green-500/20 to-teal-300/20",
   },
   {
     title: "AI Chatbot Platform",
@@ -119,7 +119,7 @@ const projects: Project[] = [
     link: "https://raj-ai-chatbot.vercel.app/",
     tags: ["GPT-4o", "Web Search", "Next.js 16", "React 19"],
     color: "#10a37f",
-    gradient: "from-emerald-500/20 to-amber-300/20",
+    gradient: "from-emerald-500/20 to-emerald-300/20",
   },
   {
     title: "StakeDApp",
@@ -130,7 +130,7 @@ const projects: Project[] = [
     link: "https://staking-dapp-stk.vercel.app/",
     tags: ["Solidity", "Hardhat", "Wagmi v2", "Next.js 14"],
     color: "#38bdf8",
-    gradient: "from-yellow-400/20 to-orange-700/20",
+    gradient: "from-lime-400/20 to-green-700/20",
   },
   {
     title: "LinguaChat",
@@ -141,7 +141,7 @@ const projects: Project[] = [
     link: "https://ai-language-learning-raj.vercel.app/",
     tags: ["OpenAI", "Next.js", "TypeScript", "5+ Languages"],
     color: "#3b82f6",
-    gradient: "from-amber-500/20 to-yellow-300/20",
+    gradient: "from-emerald-500/20 to-lime-300/20",
   },
   {
     title: "PropChain",
@@ -152,7 +152,7 @@ const projects: Project[] = [
     link: "https://propchain-marketplace.vercel.app/",
     tags: ["Solidity", "OpenZeppelin", "Wagmi v2", "Next.js 14"],
     color: "#a855f7",
-    gradient: "from-orange-500/20 to-amber-300/20",
+    gradient: "from-green-500/20 to-emerald-300/20",
   },
   {
     title: "PDF Q&A AI SaaS",
@@ -163,7 +163,7 @@ const projects: Project[] = [
     link: "https://pdf-qna-ai-saas.vercel.app/",
     tags: ["Claude AI", "Next.js", "RAG", "10MB Max"],
     color: "#8b5cf6",
-    gradient: "from-orange-600/20 to-rose-400/20",
+    gradient: "from-green-600/20 to-teal-400/20",
   },
   {
     title: "ReatorAI",
@@ -174,7 +174,7 @@ const projects: Project[] = [
     link: "https://reatorai.vercel.app/",
     tags: ["AI", "Next.js", "Content Creation", "Video Analytics"],
     color: "#f59e0b",
-    gradient: "from-amber-500/20 to-orange-500/20",
+    gradient: "from-emerald-500/20 to-green-500/20",
     badge: "On-going",
   },
 ];
@@ -241,11 +241,11 @@ export function ProjectsSection() {
 
                     {/* Title */}
                     <div className="flex items-center gap-2 mb-2">
-                      <h3 className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-amber-400 group-hover:to-orange-400 transition-all">
+                      <h3 className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:to-green-400 transition-all">
                         {project.title}
                       </h3>
                       {project.badge && (
-                        <Badge className="bg-amber-500/20 text-amber-400 border-amber-500/30 text-xs px-2 py-0.5">
+                        <Badge className="bg-emerald-500/20 text-emerald-400 border-emerald-500/30 text-xs px-2 py-0.5">
                           {project.badge}
                         </Badge>
                       )}
@@ -275,7 +275,7 @@ export function ProjectsSection() {
                     </div>
 
                     {/* Link */}
-                    <div className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-amber-400 group-hover:text-amber-300 transition-colors">
+                    <div className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-emerald-400 group-hover:text-emerald-300 transition-colors">
                       <span>Visit Project</span>
                       <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </div>
@@ -299,7 +299,7 @@ export function ProjectsSection() {
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold rounded-full transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white font-semibold rounded-full transition-all hover:scale-105"
           >
             Let&apos;s Work Together
           </a>

@@ -30,7 +30,7 @@ const skillCategories = [
       { name: "TypeScript", years: "5+ years", level: "Expert" as const },
       { name: "JavaScript ES6+", years: "5+ years", level: "Expert" as const },
     ],
-    color: "from-amber-500 to-yellow-300",
+    color: "from-emerald-500 to-lime-300",
   },
   {
     title: "AI & Modern Tools",
@@ -41,7 +41,7 @@ const skillCategories = [
       { name: "RAG Systems", years: "1+ year", level: "Intermediate" as const },
       { name: "Framer Motion", years: "2+ years", level: "Advanced" as const },
     ],
-    color: "from-orange-600 to-orange-400",
+    color: "from-green-600 to-green-400",
   },
   {
     title: "Styling & Design",
@@ -52,7 +52,7 @@ const skillCategories = [
       { name: "CSS3/Responsive", years: "5+ years", level: "Expert" as const },
       { name: "shadcn/ui", years: "5+ years", level: "Expert" as const },
     ],
-    color: "from-orange-500 to-rose-300",
+    color: "from-green-500 to-teal-300",
   },
   {
     title: "State & Data Management",
@@ -62,7 +62,7 @@ const skillCategories = [
       { name: "React Query/TanStack", years: "2+ years", level: "Advanced" as const },
       { name: "Context API/Zustand", years: "3+ years", level: "Advanced" as const },
     ],
-    color: "from-green-500 to-emerald-500",
+    color: "from-teal-500 to-emerald-400",
   },
   {
     title: "Backend & Database",
@@ -74,7 +74,7 @@ const skillCategories = [
       { name: "MySQL/PostgreSQL", years: "3+ years", level: "Advanced" as const },
       { name: "MongoDB", years: "2+ years", level: "Intermediate" as const },
     ],
-    color: "from-orange-500 to-red-500",
+    color: "from-green-600 to-teal-500",
   },
   {
     title: "Tools & Workflows",
@@ -85,7 +85,7 @@ const skillCategories = [
       { name: "ReactFlow", years: "2+ years", level: "Advanced" as const },
       { name: "Agile/Scrum", years: "4+ years", level: "Advanced" as const },
     ],
-    color: "from-yellow-500 to-amber-500",
+    color: "from-lime-500 to-emerald-500",
   },
   {
     title: "Web3 & Blockchain",
@@ -97,7 +97,7 @@ const skillCategories = [
       { name: "Wagmi/Viem", years: "3+ years", level: "Advanced" as const },
       { name: "RainbowKit", years: "3+ years", level: "Advanced" as const },
     ],
-    color: "from-amber-500 to-orange-700",
+    color: "from-emerald-500 to-green-700",
   },
   {
     title: "WordPress Ecosystem",
@@ -107,18 +107,18 @@ const skillCategories = [
       { name: "Gutenberg Blocks", years: "3+ years", level: "Advanced" as const },
       { name: "Plugin Development", years: "4+ years", level: "Advanced" as const },
     ],
-    color: "from-orange-700 to-orange-500",
+    color: "from-green-700 to-green-500",
   },
 ];
 
 const getLevelColor = (level: string) => {
   switch (level) {
     case "Expert":
-      return "bg-green-500/20 text-green-300 border-green-500/30";
+      return "bg-emerald-500/25 text-emerald-200 border-emerald-400/50";
     case "Advanced":
-      return "bg-amber-500/20 text-amber-300 border-amber-500/30";
+      return "bg-emerald-500/15 text-emerald-300 border-emerald-500/30";
     case "Intermediate":
-      return "bg-yellow-500/20 text-yellow-300 border-yellow-500/30";
+      return "bg-emerald-500/10 text-emerald-400/80 border-emerald-500/20";
     default:
       return "bg-slate-500/20 text-slate-300 border-slate-500/30";
   }
@@ -136,7 +136,7 @@ export function SkillsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            Technical <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Skills</span>
+            Technical <span className="bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">Skills</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
             Proven expertise across modern web technologies with hands-on experience and measurable impact
@@ -194,15 +194,15 @@ export function SkillsSection() {
           className="mt-12 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 text-sm"
         >
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-green-500 flex-shrink-0"></div>
+            <div className="w-3 h-3 rounded-full bg-emerald-400 flex-shrink-0"></div>
             <span className="text-slate-400">Expert - Production-ready</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-amber-500 flex-shrink-0"></div>
+            <div className="w-3 h-3 rounded-full bg-emerald-500/70 flex-shrink-0"></div>
             <span className="text-slate-400">Advanced - Strong proficiency</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-yellow-500 flex-shrink-0"></div>
+            <div className="w-3 h-3 rounded-full bg-emerald-500/40 flex-shrink-0"></div>
             <span className="text-slate-400">Intermediate - Actively learning</span>
           </div>
         </motion.div>

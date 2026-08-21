@@ -140,8 +140,9 @@ pnpm start
 
 ## 🎨 Color Palette
 
-- **Primary:** Blue (#3b82f6) to Purple (#a855f7) gradients
-- **Background:** Dark slate (#0f172a, #1e293b)
+- **Primary:** Emerald (#10b981) to Green (#22c55e) gradients
+- **Secondary:** Teal (#14b8a6) and Lime (#84cc16) for gradient variation
+- **Background:** Dark slate with emerald/green tint (#0f172a, #1e293b)
 - **Text:** White/Slate variations
 - **Accents:** Project-specific brand colors
 

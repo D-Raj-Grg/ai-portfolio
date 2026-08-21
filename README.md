@@ -84,6 +84,10 @@ ai-portfolio/
 3. **OttoKit** - No-code AI automation platform
 4. **SureCart** - Next.js e-commerce with AI insights
 5. **Sigmize** - AI-powered A/B testing platform
+6. **ExtraHelper** - Multi-tenant restaurant management SaaS (Next.js + Supabase RLS)
+7. **ExtraHelper Mobile** - Flutter staff app for the ExtraHelper platform
+8. **Redeemic** - WordPress plugin turning AppSumo codes into Lemon Squeezy licenses
+9. **GymTrack Pro** - Native iOS workout tracker, live on the App Store
 
 ## 🚀 Getting Started
 

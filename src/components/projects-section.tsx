@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen, Video, Coins, Building2, Dumbbell } from "lucide-react";
+import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen, Video, Coins, Building2, Dumbbell, UtensilsCrossed, Smartphone, Ticket } from "lucide-react";
 import { BentoGrid, BentoCard } from "./magicui/bento-grid";
 import { GradientText } from "./magicui/animated-text";
 import { Badge } from "./ui/badge";
@@ -43,6 +43,30 @@ const projects: Project[] = [
     color: "#fb923c",
     gradient: "from-green-500/20 to-emerald-500/20",
     badge: "Live on App Store",
+  },
+  {
+    title: "ExtraHelper",
+    description: "Multi-tenant restaurant management SaaS",
+    longDescription:
+      "One system to run a restaurant end to end, replacing the usual stack of separate POS, KOT, kitchen-screen, inventory and reservation tools. Next.js App Router web app covering admin console, cashier POS, kitchen display and super-admin, built on Supabase Postgres where RLS keyed on the JWT tenant is the isolation boundary rather than app-level checks. Realtime drives KDS tickets, table states and 86'd items; Edge Functions handle payments, print jobs and scheduled reports. Cashier and waiter flows are offline-first with idempotency keys, currency/tax/receipts are per-tenant config rather than hardcoded, and every void, discount and refund is audited.",
+    icon: UtensilsCrossed,
+    link: "https://extra-helper.vercel.app/",
+    tags: ["Next.js 16", "Supabase", "RLS", "Realtime", "SaaS"],
+    color: "#3ecf8e",
+    gradient: "from-emerald-500/20 to-teal-500/20",
+    badge: "Live",
+  },
+  {
+    title: "ExtraHelper Mobile",
+    description: "Flutter staff app for the ExtraHelper platform",
+    longDescription:
+      "Native iOS and Android staff client for ExtraHelper — waiter ordering, POS, kitchen display, inventory and owner dashboard — running against the same Supabase project as the web app. Riverpod for state, Drift/SQLite for the local cache and outbox that keeps service running through a dead connection, go_router for navigation, plus QR scanning and Bluetooth thermal printing. Business logic stays in Postgres and is called by both clients, so the till total can never drift from the kitchen ticket; permissions are fetched from the server rather than inferred from a role string, and queued writes carry idempotency keys minted at enqueue.",
+    icon: Smartphone,
+    link: "https://github.com/D-Raj-Grg/ExtraHelper_App",
+    tags: ["Flutter", "Dart", "Riverpod", "Drift", "Supabase"],
+    color: "#54c5f8",
+    gradient: "from-teal-500/20 to-emerald-400/20",
+    badge: "On-going",
   },
   {
     title: "Sigmize",
@@ -142,6 +166,18 @@ const projects: Project[] = [
     tags: ["OpenAI", "Next.js", "TypeScript", "5+ Languages"],
     color: "#3b82f6",
     gradient: "from-emerald-500/20 to-lime-300/20",
+  },
+  {
+    title: "Redeemic",
+    description: "Turns AppSumo codes into Lemon Squeezy licenses",
+    longDescription:
+      "WordPress plugin bridging an impedance mismatch: AppSumo hands buyers redemption codes, and Lemon Squeezy has no endpoint that mints a license key directly. Redeemic validates a code, mints a single-use 100% discount locked to one variant, and returns a $0 checkout that asks for no card — LS issues the key when that checkout completes, and a webhook writes the order and key back onto the code row. Only code hashes are stored, so a stolen database is worthless; rows are claimed inside the UPDATE's WHERE clause so two simultaneous submits cannot both win. Ships a React admin SPA with batch generation and CSV export, per-code history, a failures-only activity feed, low-stock alerts, webhook health, and a daily sweep that recovers dropped deliveries.",
+    icon: Ticket,
+    link: "https://github.com/D-Raj-Grg/Redeemic",
+    tags: ["WordPress", "PHP 8", "React", "Lemon Squeezy"],
+    color: "#21759b",
+    gradient: "from-green-600/20 to-emerald-400/20",
+    badge: "v1.0.0",
   },
   {
     title: "PropChain",

@@ -58,15 +58,15 @@ const projects: Project[] = [
   },
   {
     title: "ExtraHelper Mobile",
-    description: "Flutter staff app for the ExtraHelper platform",
+    description: "Flutter staff app for the ExtraHelper platform, published on the App Store",
     longDescription:
-      "Native iOS and Android staff client for ExtraHelper — waiter ordering, POS, kitchen display, inventory and owner dashboard — running against the same Supabase project as the web app. Riverpod for state, Drift/SQLite for the local cache and outbox that keeps service running through a dead connection, go_router for navigation, plus QR scanning and Bluetooth thermal printing. Business logic stays in Postgres and is called by both clients, so the till total can never drift from the kitchen ticket; permissions are fetched from the server rather than inferred from a role string, and queued writes carry idempotency keys minted at enqueue.",
+      "Native iOS and Android staff client for ExtraHelper — waiter ordering, POS, kitchen display, inventory and owner dashboard — running against the same Supabase project as the web app. Riverpod for state, Drift/SQLite for the local cache and outbox that keeps service running through a dead connection, go_router for navigation, plus QR scanning and Bluetooth thermal printing. Business logic stays in Postgres and is called by both clients, so the till total can never drift from the kitchen ticket; permissions are fetched from the server rather than inferred from a role string, and queued writes carry idempotency keys minted at enqueue. Source on GitHub: D-Raj-Grg/ExtraHelper_App.",
     icon: Smartphone,
-    link: "https://github.com/D-Raj-Grg/ExtraHelper_App",
-    tags: ["Flutter", "Dart", "Riverpod", "Drift", "Supabase"],
+    link: "https://apps.apple.com/us/app/extra-helper/id6801365095",
+    tags: ["Flutter", "Dart", "Riverpod", "Drift", "App Store"],
     color: "#54c5f8",
     gradient: "from-teal-500/20 to-emerald-400/20",
-    badge: "On-going",
+    badge: "Live on App Store",
   },
   {
     title: "Sigmize",

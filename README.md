@@ -73,7 +73,8 @@ ai-portfolio/
 │   │   └── ui/                      # shadcn components
 │   └── lib/
 │       └── utils.ts            # Utility functions
-├── public/                     # Static assets
+├── public/                     # Static assets (incl. generated resume.pdf)
+├── scripts/resume/             # Resume source (HTML) + Playwright PDF build
 ├── tailwind.config.ts         # Tailwind configuration
 └── package.json               # Dependencies
 ```
@@ -95,6 +96,24 @@ ai-portfolio/
 13. **Formgic** - Conversational chat-style form plugin for WordPress (AI Publish)
 14. **LOG Fitness** - Brand and marketing site for Lord of Gyms & Fitness
 15. **The Sekuwa Station** - Restaurant website for a sekuwa grill in Hetauda, Nepal
+
+## 📄 Resume
+
+The resume is generated, not hand-edited. Edit `scripts/resume/resume.html`, then either:
+
+```bash
+pnpm resume   # renders public/resume.pdf locally with headless Chromium
+```
+
+or just push the change: the **Build resume PDF** workflow (`.github/workflows/resume.yml`)
+renders the PDF on GitHub Actions and commits `public/resume.pdf` back to the same branch.
+It can also be run on demand from the Actions tab.
+
+Share these stable links; they always point at the latest build:
+
+- https://divyashwar.vercel.app/resume (short link, redirects to the PDF)
+- https://divyashwar.vercel.app/resume.pdf
+- https://github.com/D-Raj-Grg/ai-portfolio/raw/main/public/resume.pdf
 
 ## 🚀 Getting Started
 

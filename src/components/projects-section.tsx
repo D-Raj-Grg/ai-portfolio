@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen, Video, Coins, Building2, Dumbbell, UtensilsCrossed, Smartphone, Ticket } from "lucide-react";
+import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen, Video, Coins, Building2, Dumbbell, UtensilsCrossed, Smartphone, Ticket, QrCode, LayoutDashboard, MessagesSquare, ListChecks, Shirt, Flame } from "lucide-react";
 import { BentoGrid, BentoCard } from "./magicui/bento-grid";
 import { GradientText } from "./magicui/animated-text";
 import { Badge } from "./ui/badge";
@@ -31,6 +31,54 @@ const projects: Project[] = [
     tags: ["AI Automation", "React", "No-Code", "SaaS"],
     color: "#d2f059",
     gradient: "from-lime-400/20 to-green-600/20",
+  },
+  {
+    title: "MultiStepForms",
+    description: "Multi-step form builder for WordPress with payments and Google Sheets sync",
+    longDescription:
+      "The plugin I lead at AI Publish. Multi-Step Form mode with step validation, branching, review step, save and resume, popup mode, and Stripe/PayPal payment steps, plus 12 ready-made templates and 7 new input blocks. Google Sheets integration without Google's CASA review via Apps Script and Service Account modes, and a self-hosted Connect-with-Google OAuth flow. reCAPTCHA v3 and honeypot spam protection, retention controls, AI blocks for OpenAI, Claude and Mistral, and cache-aware publishing for WP Rocket, LiteSpeed and Cloudflare. Front-end bundle cut from ~117 KB to ~26 KB gzipped; 483 passing tests across v2.1 to v2.4.",
+    icon: ListChecks,
+    link: "https://multistepforms.com/",
+    tags: ["WordPress", "PHP", "React", "Stripe/PayPal", "Google Sheets"],
+    color: "#f97316",
+    gradient: "from-lime-400/20 to-emerald-500/20",
+    badge: "Current role",
+  },
+  {
+    title: "Formgic",
+    description: "Conversational and chat-style form plugin for WordPress",
+    longDescription:
+      "Premium React-powered WordPress plugin for chat-style conversational forms. A visual no-code flow builder lets you wire up nodes, media bubbles and 20+ input fields (names, emails, phone, dates, file uploads, ratings, signatures) with a live preview. Smart logic and dynamic branching guide each visitor down a personalised path, with conditional steps and lead capture built in. Developed at AI Publish alongside MultiStepForms, sharing the conversational engine, spam protection and AI blocks.",
+    icon: MessagesSquare,
+    link: "https://formgic.com/",
+    tags: ["WordPress", "React", "Flow Builder", "Conversational UI"],
+    color: "#f59e0b",
+    gradient: "from-emerald-400/20 to-lime-300/20",
+    badge: "Live",
+  },
+  {
+    title: "Lord of Gyms",
+    description: "Multi-branch gym management SaaS for cash-heavy fitness chains",
+    longDescription:
+      "Staff console for gym chains across Nepal and South Asia, where billing means recording and chasing cash payments rather than charging cards. Covers members, append-only memberships and payments, per-visit check-in and in-gym counts, class timetables with bookings and waitlists, invoices with frozen money columns, walk-in visitor log, and an HQ dashboard with branch drill-down and CSV export. Next.js 16 App Router with Server Actions validated by zod, Supabase Postgres with row-level security keyed on JWT claims as the tenant boundary, integer-paisa money, audit log on every mutation, and SMS/Viber reminders sent from Postgres via pg_net and pg_cron with gateway credentials in Vault. Gym Tross is its mobile client.",
+    icon: LayoutDashboard,
+    link: "https://app.lordofgyms.com/",
+    tags: ["Next.js 16", "Supabase", "RLS", "Postgres RPC", "SaaS"],
+    color: "#8B9096",
+    gradient: "from-emerald-600/20 to-emerald-300/20",
+    badge: "Live",
+  },
+  {
+    title: "Gym Tross",
+    description: "Flutter gym-management app for staff and members, published on the App Store",
+    longDescription:
+      "Mobile companion to the Lord of Gyms console, built for cash-heavy gym chains in Nepal and South Asia. One Flutter binary serves two roles: staff register members, scan QR check-ins, record payments and renewals, log walk-in visitors and switch branches, while members see their own membership status and history. Runs directly against the shared Supabase project with row-level security as the tenant boundary, money stored as integer paisa, append-only financial history, and multi-table writes routed through Postgres RPCs. Riverpod, Freezed and go_router on the client, Firebase push notifications, and deep links for invite and recovery flows. Source on GitHub: D-Raj-Grg/logfitness_flutter.",
+    icon: QrCode,
+    link: "https://apps.apple.com/in/app/gym-tross/id6810993707",
+    tags: ["Flutter", "Supabase", "RLS", "Riverpod", "App Store"],
+    color: "#8B9096",
+    gradient: "from-emerald-500/20 to-lime-400/20",
+    badge: "Live on App Store",
   },
   {
     title: "GymTrack Pro",
@@ -135,17 +183,6 @@ const projects: Project[] = [
     gradient: "from-green-500/20 to-teal-300/20",
   },
   {
-    title: "AI Chatbot Platform",
-    description: "Next-Gen Conversational AI Experience",
-    longDescription:
-      "Advanced AI chatbot powered by OpenAI GPT-4o with real-time web search, multi-file handling (images, documents), and transparent reasoning display. Features beautiful responsive UI with dark/light themes, source citations, and seamless interactions. Built with Next.js 16, React 19, and shadcn/ui.",
-    icon: MessageSquare,
-    link: "https://raj-ai-chatbot.vercel.app/",
-    tags: ["GPT-4o", "Web Search", "Next.js 16", "React 19"],
-    color: "#10a37f",
-    gradient: "from-emerald-500/20 to-emerald-300/20",
-  },
-  {
     title: "StakeDApp",
     description: "ERC-20 Token Staking Platform",
     longDescription:
@@ -157,15 +194,26 @@ const projects: Project[] = [
     gradient: "from-lime-400/20 to-green-700/20",
   },
   {
-    title: "LinguaChat",
-    description: "AI-Powered Language Learning",
+    title: "AI Chatbot Platform",
+    description: "Next-Gen Conversational AI Experience",
     longDescription:
-      "Master any language through conversation. An AI companion that enables users to practice real dialogue in 5+ languages, receive instant grammar corrections, and build confidence with adaptive difficulty scaling. Features scenario-based practice and comprehensive progress tracking.",
-    icon: Languages,
-    link: "https://ai-language-learning-raj.vercel.app/",
-    tags: ["OpenAI", "Next.js", "TypeScript", "5+ Languages"],
-    color: "#3b82f6",
-    gradient: "from-emerald-500/20 to-lime-300/20",
+      "Advanced AI chatbot powered by OpenAI GPT-4o with real-time web search, multi-file handling (images, documents), and transparent reasoning display. Features beautiful responsive UI with dark/light themes, source citations, and seamless interactions. Built with Next.js 16, React 19, and shadcn/ui.",
+    icon: MessageSquare,
+    link: "https://raj-ai-chatbot.vercel.app/",
+    tags: ["GPT-4o", "Web Search", "Next.js 16", "React 19"],
+    color: "#10a37f",
+    gradient: "from-emerald-500/20 to-emerald-300/20",
+  },
+  {
+    title: "PropChain",
+    description: "NFT Property Marketplace with Escrow & Yield",
+    longDescription:
+      "Decentralized property marketplace where users mint ERC-721 property NFTs, list them for sale, make escrow-backed offers, and earn passive PROP token yield. Four Solidity contracts (PropToken, PropertyNFT, PropertyMarketplace, PropertyYield) with 5% fee system, batch yield claiming, and full reentrancy protection. Deployed on Sepolia with 48 passing tests.",
+    icon: Building2,
+    link: "https://propchain-marketplace.vercel.app/",
+    tags: ["Solidity", "OpenZeppelin", "Wagmi v2", "Next.js 14"],
+    color: "#a855f7",
+    gradient: "from-green-500/20 to-emerald-300/20",
   },
   {
     title: "Redeemic",
@@ -180,15 +228,39 @@ const projects: Project[] = [
     badge: "v1.0.0",
   },
   {
-    title: "PropChain",
-    description: "NFT Property Marketplace with Escrow & Yield",
+    title: "LOG Fitness",
+    description: "Brand and marketing site for Lord of Gyms & Fitness, Hetauda (lordofgyms.com)",
     longDescription:
-      "Decentralized property marketplace where users mint ERC-721 property NFTs, list them for sale, make escrow-backed offers, and earn passive PROP token yield. Four Solidity contracts (PropToken, PropertyNFT, PropertyMarketplace, PropertyYield) with 5% fee system, batch yield claiming, and full reentrancy protection. Deployed on Sepolia with 48 passing tests.",
-    icon: Building2,
-    link: "https://propchain-marketplace.vercel.app/",
-    tags: ["Solidity", "OpenZeppelin", "Wagmi v2", "Next.js 14"],
-    color: "#a855f7",
-    gradient: "from-green-500/20 to-emerald-300/20",
+      "Landing site for LOG, a premium gym and athletic streetwear brand at Kapur Complex, Hetauda, Nepal. Presents the brand identity and SVG-drawn monogram, the merchandise range, class offerings (strength, cardio, Zumba, dance) and supplements, and hosts the downloadable brand book and pitch deck. Built on a strict two-colour palette (Tar Road and Elegant Grey) with Next.js 16, Tailwind CSS v4, shadcn/ui and Magic UI animations. Tagline: Train hard. Wear it louder.",
+    icon: Shirt,
+    link: "https://lordofgyms.com/",
+    tags: ["Next.js 16", "Tailwind v4", "Magic UI", "Branding"],
+    color: "#8B9096",
+    gradient: "from-slate-500/20 to-emerald-500/20",
+    badge: "Live",
+  },
+  {
+    title: "The Sekuwa Station",
+    description: "Restaurant website for a Nepali sekuwa grill in Hetauda",
+    longDescription:
+      "Marketing site for The Sekuwa Station, a sekuwa (chargrilled skewered meat) restaurant near Omax Cinema at Buddha Chowk, Hetauda, Nepal's best-known street-food hub. Presents the brand, menu highlights and location so highway travellers and locals can find the grill before they arrive. Next.js 16 App Router with React 19 and Tailwind CSS v4, deployed on Vercel.",
+    icon: Flame,
+    link: "https://sekuwastation.com/",
+    tags: ["Next.js 16", "React 19", "Tailwind v4", "Vercel"],
+    color: "#ef4444",
+    gradient: "from-green-500/20 to-lime-500/20",
+    badge: "Live",
+  },
+  {
+    title: "LinguaChat",
+    description: "AI-Powered Language Learning",
+    longDescription:
+      "Master any language through conversation. An AI companion that enables users to practice real dialogue in 5+ languages, receive instant grammar corrections, and build confidence with adaptive difficulty scaling. Features scenario-based practice and comprehensive progress tracking.",
+    icon: Languages,
+    link: "https://ai-language-learning-raj.vercel.app/",
+    tags: ["OpenAI", "Next.js", "TypeScript", "5+ Languages"],
+    color: "#3b82f6",
+    gradient: "from-emerald-500/20 to-lime-300/20",
   },
   {
     title: "PDF Q&A AI SaaS",
@@ -230,7 +302,7 @@ export function ProjectsSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <GradientText>Featured Projects</GradientText>
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Transforming ideas into powerful digital experiences. Here are some
             of the impactful projects I&apos;ve contributed to.
           </p>
@@ -245,7 +317,7 @@ export function ProjectsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={index === 0 || project.title === "StakeDApp" || project.title === "PropChain" ? "md:col-span-2" : ""}
+              className={index === 0 || project.title === "Lord of Gyms" || project.title === "StakeDApp" || project.title === "PropChain" ? "md:col-span-2" : ""}
             >
               <a
                 href={project.link}
@@ -277,23 +349,23 @@ export function ProjectsSection() {
 
                     {/* Title */}
                     <div className="flex items-center gap-2 mb-2">
-                      <h3 className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:to-green-400 transition-all">
+                      <h3 className="text-2xl font-bold text-foreground group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand group-hover:to-brand-2 transition-all">
                         {project.title}
                       </h3>
                       {project.badge && (
-                        <Badge className="bg-emerald-500/20 text-emerald-400 border-emerald-500/30 text-xs px-2 py-0.5">
+                        <Badge className="bg-primary/15 text-primary border-primary/30 text-xs px-2 py-0.5">
                           {project.badge}
                         </Badge>
                       )}
                     </div>
 
                     {/* Description */}
-                    <p className="text-slate-300 mb-3 font-medium text-base">
+                    <p className="text-foreground/80 mb-3 font-medium text-base">
                       {project.description}
                     </p>
 
                     {/* Long Description */}
-                    <p className="text-sm text-slate-400 mb-4 line-clamp-3 leading-relaxed">
+                    <p className="text-sm text-muted-foreground mb-4 line-clamp-3 leading-relaxed">
                       {project.longDescription}
                     </p>
 
@@ -303,7 +375,7 @@ export function ProjectsSection() {
                         <Badge
                           key={tag}
                           variant="outline"
-                          className="border-white/20 text-slate-300 hover:bg-white/10 text-xs"
+                          className="border-foreground/20 text-foreground/80 hover:bg-foreground/10 text-xs"
                         >
                           {tag}
                         </Badge>
@@ -311,7 +383,7 @@ export function ProjectsSection() {
                     </div>
 
                     {/* Link */}
-                    <div className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-emerald-400 group-hover:text-emerald-300 transition-colors">
+                    <div className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-primary group-hover:text-primary/80 transition-colors">
                       <span>Visit Project</span>
                       <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </div>
@@ -330,12 +402,12 @@ export function ProjectsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <p className="text-slate-400 mb-6">
+          <p className="text-muted-foreground mb-6">
             Interested in collaborating on the next big thing?
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white font-semibold rounded-full transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-brand to-brand-2 hover:brightness-110 text-primary-foreground font-semibold rounded-full transition-all hover:scale-105"
           >
             Let&apos;s Work Together
           </a>

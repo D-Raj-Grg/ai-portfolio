@@ -6,6 +6,7 @@ A stunning, modern portfolio website showcasing my work as a Senior Software Eng
 
 ## 🚀 Features
 
+- **Light & Dark Mode** - Charcoal dark theme and soft off-white light theme (no pure black or white), toggled from the navbar and remembered per visitor
 - **Interactive Animations** - Smooth 60fps animations powered by Framer Motion
 - **Custom Cursor Tracker** - Hardware-accelerated custom cursor with spring physics
 - **Interactive Background** - Canvas-based particle system that responds to mouse movement
@@ -17,7 +18,7 @@ A stunning, modern portfolio website showcasing my work as a Senior Software Eng
 
 ## 🎨 Design Highlights
 
-- Modern dark theme with gradient backgrounds
+- Charcoal dark theme and off-white light theme driven by CSS design tokens
 - Glassmorphism effects and backdrop blur
 - Smooth scroll animations with viewport detection
 - Brand-specific color schemes for each project
@@ -72,7 +73,8 @@ ai-portfolio/
 │   │   └── ui/                      # shadcn components
 │   └── lib/
 │       └── utils.ts            # Utility functions
-├── public/                     # Static assets
+├── public/                     # Static assets (incl. generated resume.pdf)
+├── scripts/resume/             # Resume source (HTML) + Playwright PDF build
 ├── tailwind.config.ts         # Tailwind configuration
 └── package.json               # Dependencies
 ```
@@ -88,6 +90,30 @@ ai-portfolio/
 7. **ExtraHelper Mobile** - Flutter staff app for the ExtraHelper platform, live on the App Store
 8. **Redeemic** - WordPress plugin turning AppSumo codes into Lemon Squeezy licenses
 9. **GymTrack Pro** - Native iOS workout tracker, live on the App Store
+10. **Gym Tross** - Flutter gym-management app (staff + members) on Supabase, live on the App Store
+11. **Lord of Gyms** - Multi-branch gym management SaaS console (Next.js 16 + Supabase RLS)
+12. **MultiStepForms** - Multi-step form builder for WordPress with payments and Google Sheets sync (AI Publish)
+13. **Formgic** - Conversational chat-style form plugin for WordPress (AI Publish)
+14. **LOG Fitness** - Brand and marketing site for Lord of Gyms & Fitness
+15. **The Sekuwa Station** - Restaurant website for a sekuwa grill in Hetauda, Nepal
+
+## 📄 Resume
+
+The resume is generated, not hand-edited. Edit `scripts/resume/resume.html`, then either:
+
+```bash
+pnpm resume   # renders public/resume.pdf locally with headless Chromium
+```
+
+or just push the change: the **Build resume PDF** workflow (`.github/workflows/resume.yml`)
+renders the PDF on GitHub Actions and commits `public/resume.pdf` back to the same branch.
+It can also be run on demand from the Actions tab.
+
+Share these stable links; they always point at the latest build:
+
+- https://divyashwar.vercel.app/resume (short link, redirects to the PDF)
+- https://divyashwar.vercel.app/resume.pdf
+- https://github.com/D-Raj-Grg/ai-portfolio/raw/main/public/resume.pdf
 
 ## 🚀 Getting Started
 
@@ -177,7 +203,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 About Me
 
-I'm Divyashwar Raj Gurung, a Senior Software Engineer with 5+ years of experience building high-performance web applications. I specialize in:
+I'm Divyashwar Raj Gurung, a Senior Software Engineer with 6+ years of experience building high-performance web applications. I specialize in:
 
 - Frontend Development (React, Next.js, TypeScript)
 - AI/ML Integration (Claude AI, RAG systems)

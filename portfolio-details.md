@@ -42,15 +42,30 @@
 
 ## Professional Summary
 
-I am a passionate Software Developer with a knack for crafting intuitive and high-performing web applications in SaaS, and WordPress environments. Proficient in frontend engineering, I leverage CSS and JavaScript frameworks with over 5 years of experience to create seamless user experiences. I thrive in collaborative environments, working closely with cross-functional teams to bring innovative projects to life.
+I am a passionate Software Developer with a knack for crafting intuitive and high-performing web applications in SaaS, and WordPress environments. Proficient in frontend engineering, I leverage CSS and JavaScript frameworks with over 6 years of experience to create seamless user experiences. I thrive in collaborative environments, working closely with cross-functional teams to bring innovative projects to life.
 
 ---
 
 ## Work Experience
 
+### AI Publish, Remote
+**Senior Software Engineer**
+*Jan 2026 - PRESENT*
+
+- Lead developer of MultiStepForms, a WordPress form and conversational-flow plugin. Own the full cycle: architecture, build, testing, releases and tester support.
+- Designed and shipped Multi-Step Form mode alongside the conversational builder: step validation, branching, review step, save and resume, popup mode, and Stripe/PayPal payment steps. Delivered with 483 passing tests plus 12 ready-made templates.
+- Built Google Sheets integration without Google's CASA security review, using Apps Script Web App and Service Account modes. Also added a self-hosted "Connect with Google" OAuth option.
+- Cut front-end weight for GTmetrix and Lighthouse: form script from ~117 KB to ~26 KB gzipped and CSS from 47 KB to 19 KB, using lazy loading, code splitting and non-blocking styles.
+- Fixed data-integrity bugs, including multi-input steps saving only one answer, long forms losing answers to rate limits, and webhooks re-firing when stepping back.
+- Added cache-aware publishing for WP Rocket, LiteSpeed, Cloudflare and more, so form edits reach visitors immediately.
+- Shipped a steady release cadence (v2.1 to v2.4): spam protection (reCAPTCHA v3, honeypot), 7 new input blocks, retention controls, a redesigned settings UI and AI blocks (OpenAI, Claude, Mistral).
+- Working with the team on Google Console verification to lift OAuth user limits.
+
+---
+
 ### BrainStorm Force LLC, Remote
 **Software Developer - Front-end Lead Developer**
-*Feb 2023 - PRESENT*
+*Feb 2023 - Jan 2026*
 
 #### Roles:
 - Build Automation SaaS web applications as well as WordPress products

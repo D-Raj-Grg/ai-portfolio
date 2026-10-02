@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen, Video, Coins, Building2, Dumbbell, UtensilsCrossed, Smartphone, Ticket, QrCode } from "lucide-react";
+import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen, Video, Coins, Building2, Dumbbell, UtensilsCrossed, Smartphone, Ticket, QrCode, LayoutDashboard, MessagesSquare, ListChecks, Shirt, Flame } from "lucide-react";
 import { BentoGrid, BentoCard } from "./magicui/bento-grid";
 import { GradientText } from "./magicui/animated-text";
 import { Badge } from "./ui/badge";
@@ -31,6 +31,54 @@ const projects: Project[] = [
     tags: ["AI Automation", "React", "No-Code", "SaaS"],
     color: "#d2f059",
     gradient: "from-lime-400/20 to-green-600/20",
+  },
+  {
+    title: "MultiStepForms",
+    description: "Multi-step form builder for WordPress with payments and Google Sheets sync",
+    longDescription:
+      "The plugin I lead at AI Publish. Multi-Step Form mode with step validation, branching, review step, save and resume, popup mode, and Stripe/PayPal payment steps, plus 12 ready-made templates and 7 new input blocks. Google Sheets integration without Google's CASA review via Apps Script and Service Account modes, and a self-hosted Connect-with-Google OAuth flow. reCAPTCHA v3 and honeypot spam protection, retention controls, AI blocks for OpenAI, Claude and Mistral, and cache-aware publishing for WP Rocket, LiteSpeed and Cloudflare. Front-end bundle cut from ~117 KB to ~26 KB gzipped; 483 passing tests across v2.1 to v2.4.",
+    icon: ListChecks,
+    link: "https://multistepforms.com/",
+    tags: ["WordPress", "PHP", "React", "Stripe/PayPal", "Google Sheets"],
+    color: "#f97316",
+    gradient: "from-lime-400/20 to-emerald-500/20",
+    badge: "Current role",
+  },
+  {
+    title: "Formgic",
+    description: "Conversational and chat-style form plugin for WordPress",
+    longDescription:
+      "Premium React-powered WordPress plugin for chat-style conversational forms. A visual no-code flow builder lets you wire up nodes, media bubbles and 20+ input fields (names, emails, phone, dates, file uploads, ratings, signatures) with a live preview. Smart logic and dynamic branching guide each visitor down a personalised path, with conditional steps and lead capture built in. Developed at AI Publish alongside MultiStepForms, sharing the conversational engine, spam protection and AI blocks.",
+    icon: MessagesSquare,
+    link: "https://formgic.com/",
+    tags: ["WordPress", "React", "Flow Builder", "Conversational UI"],
+    color: "#f59e0b",
+    gradient: "from-emerald-400/20 to-lime-300/20",
+    badge: "Live",
+  },
+  {
+    title: "Lord of Gyms",
+    description: "Multi-branch gym management SaaS for cash-heavy fitness chains",
+    longDescription:
+      "Staff console for gym chains across Nepal and South Asia, where billing means recording and chasing cash payments rather than charging cards. Covers members, append-only memberships and payments, per-visit check-in and in-gym counts, class timetables with bookings and waitlists, invoices with frozen money columns, walk-in visitor log, and an HQ dashboard with branch drill-down and CSV export. Next.js 16 App Router with Server Actions validated by zod, Supabase Postgres with row-level security keyed on JWT claims as the tenant boundary, integer-paisa money, audit log on every mutation, and SMS/Viber reminders sent from Postgres via pg_net and pg_cron with gateway credentials in Vault. Gym Tross is its mobile client.",
+    icon: LayoutDashboard,
+    link: "https://app.lordofgyms.com/",
+    tags: ["Next.js 16", "Supabase", "RLS", "Postgres RPC", "SaaS"],
+    color: "#8B9096",
+    gradient: "from-emerald-600/20 to-emerald-300/20",
+    badge: "Live",
+  },
+  {
+    title: "Gym Tross",
+    description: "Flutter gym-management app for staff and members, published on the App Store",
+    longDescription:
+      "Mobile companion to the Lord of Gyms console, built for cash-heavy gym chains in Nepal and South Asia. One Flutter binary serves two roles: staff register members, scan QR check-ins, record payments and renewals, log walk-in visitors and switch branches, while members see their own membership status and history. Runs directly against the shared Supabase project with row-level security as the tenant boundary, money stored as integer paisa, append-only financial history, and multi-table writes routed through Postgres RPCs. Riverpod, Freezed and go_router on the client, Firebase push notifications, and deep links for invite and recovery flows. Source on GitHub: D-Raj-Grg/logfitness_flutter.",
+    icon: QrCode,
+    link: "https://apps.apple.com/in/app/gym-tross/id6810993707",
+    tags: ["Flutter", "Supabase", "RLS", "Riverpod", "App Store"],
+    color: "#8B9096",
+    gradient: "from-emerald-500/20 to-lime-400/20",
+    badge: "Live on App Store",
   },
   {
     title: "GymTrack Pro",
@@ -66,18 +114,6 @@ const projects: Project[] = [
     tags: ["Flutter", "Dart", "Riverpod", "Drift", "App Store"],
     color: "#54c5f8",
     gradient: "from-teal-500/20 to-emerald-400/20",
-    badge: "Live on App Store",
-  },
-  {
-    title: "Gym Tross",
-    description: "Flutter gym-management app for staff and members, published on the App Store",
-    longDescription:
-      "Mobile companion to the Lord of Gyms console, built for cash-heavy gym chains in Nepal and South Asia. One Flutter binary serves two roles: staff register members, scan QR check-ins, record payments and renewals, log walk-in visitors and switch branches, while members see their own membership status and history. Runs directly against the shared Supabase project with row-level security as the tenant boundary, money stored as integer paisa, append-only financial history, and multi-table writes routed through Postgres RPCs. Riverpod, Freezed and go_router on the client, Firebase push notifications, and deep links for invite and recovery flows. Source on GitHub: D-Raj-Grg/logfitness_flutter.",
-    icon: QrCode,
-    link: "https://apps.apple.com/in/app/gym-tross/id6810993707",
-    tags: ["Flutter", "Supabase", "RLS", "Riverpod", "App Store"],
-    color: "#8B9096",
-    gradient: "from-emerald-500/20 to-lime-400/20",
     badge: "Live on App Store",
   },
   {
@@ -147,6 +183,17 @@ const projects: Project[] = [
     gradient: "from-green-500/20 to-teal-300/20",
   },
   {
+    title: "StakeDApp",
+    description: "ERC-20 Token Staking Platform",
+    longDescription:
+      "Full-stack DeFi staking application where users stake STK tokens and earn RWD rewards per second using a gas-efficient Synthetix-style reward distribution pattern. Features three Solidity smart contracts (StakingToken, RewardToken, StakingPool) with ReentrancyGuard protection, deployed on Sepolia. Polished glass-card UI with real-time reward accrual, toast notifications with block explorer links, and responsive design.",
+    icon: Coins,
+    link: "https://staking-dapp-stk.vercel.app/",
+    tags: ["Solidity", "Hardhat", "Wagmi v2", "Next.js 14"],
+    color: "#38bdf8",
+    gradient: "from-lime-400/20 to-green-700/20",
+  },
+  {
     title: "AI Chatbot Platform",
     description: "Next-Gen Conversational AI Experience",
     longDescription:
@@ -158,15 +205,15 @@ const projects: Project[] = [
     gradient: "from-emerald-500/20 to-emerald-300/20",
   },
   {
-    title: "StakeDApp",
-    description: "ERC-20 Token Staking Platform",
+    title: "PropChain",
+    description: "NFT Property Marketplace with Escrow & Yield",
     longDescription:
-      "Full-stack DeFi staking application where users stake STK tokens and earn RWD rewards per second using a gas-efficient Synthetix-style reward distribution pattern. Features three Solidity smart contracts (StakingToken, RewardToken, StakingPool) with ReentrancyGuard protection, deployed on Sepolia. Polished glass-card UI with real-time reward accrual, toast notifications with block explorer links, and responsive design.",
-    icon: Coins,
-    link: "https://staking-dapp-stk.vercel.app/",
-    tags: ["Solidity", "Hardhat", "Wagmi v2", "Next.js 14"],
-    color: "#38bdf8",
-    gradient: "from-lime-400/20 to-green-700/20",
+      "Decentralized property marketplace where users mint ERC-721 property NFTs, list them for sale, make escrow-backed offers, and earn passive PROP token yield. Four Solidity contracts (PropToken, PropertyNFT, PropertyMarketplace, PropertyYield) with 5% fee system, batch yield claiming, and full reentrancy protection. Deployed on Sepolia with 48 passing tests.",
+    icon: Building2,
+    link: "https://propchain-marketplace.vercel.app/",
+    tags: ["Solidity", "OpenZeppelin", "Wagmi v2", "Next.js 14"],
+    color: "#a855f7",
+    gradient: "from-green-500/20 to-emerald-300/20",
   },
   {
     title: "Redeemic",
@@ -181,15 +228,28 @@ const projects: Project[] = [
     badge: "v1.0.0",
   },
   {
-    title: "PropChain",
-    description: "NFT Property Marketplace with Escrow & Yield",
+    title: "LOG Brand Site",
+    description: "Brand and marketing site for Lord of Gyms & Fitness, Hetauda",
     longDescription:
-      "Decentralized property marketplace where users mint ERC-721 property NFTs, list them for sale, make escrow-backed offers, and earn passive PROP token yield. Four Solidity contracts (PropToken, PropertyNFT, PropertyMarketplace, PropertyYield) with 5% fee system, batch yield claiming, and full reentrancy protection. Deployed on Sepolia with 48 passing tests.",
-    icon: Building2,
-    link: "https://propchain-marketplace.vercel.app/",
-    tags: ["Solidity", "OpenZeppelin", "Wagmi v2", "Next.js 14"],
-    color: "#a855f7",
-    gradient: "from-green-500/20 to-emerald-300/20",
+      "Landing site for LOG, a premium gym and athletic streetwear brand at Kapur Complex, Hetauda, Nepal. Presents the brand identity and SVG-drawn monogram, the merchandise range, class offerings (strength, cardio, Zumba, dance) and supplements, and hosts the downloadable brand book and pitch deck. Built on a strict two-colour palette (Tar Road and Elegant Grey) with Next.js 16, Tailwind CSS v4, shadcn/ui and Magic UI animations. Tagline: Train hard. Wear it louder.",
+    icon: Shirt,
+    link: "https://lordofgyms.com/",
+    tags: ["Next.js 16", "Tailwind v4", "Magic UI", "Branding"],
+    color: "#e2e8f0",
+    gradient: "from-slate-500/20 to-emerald-500/20",
+    badge: "Live",
+  },
+  {
+    title: "The Sekuwa Station",
+    description: "Restaurant website for a Nepali sekuwa grill in Hetauda",
+    longDescription:
+      "Marketing site for The Sekuwa Station, a sekuwa (chargrilled skewered meat) restaurant near Omax Cinema at Buddha Chowk, Hetauda, Nepal's best-known street-food hub. Presents the brand, menu highlights and location so highway travellers and locals can find the grill before they arrive. Next.js 16 App Router with React 19 and Tailwind CSS v4, deployed on Vercel.",
+    icon: Flame,
+    link: "https://sekuwastation.com/",
+    tags: ["Next.js 16", "React 19", "Tailwind v4", "Vercel"],
+    color: "#ef4444",
+    gradient: "from-green-500/20 to-lime-500/20",
+    badge: "Live",
   },
   {
     title: "LinguaChat",
@@ -257,7 +317,7 @@ export function ProjectsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={index === 0 || project.title === "StakeDApp" || project.title === "PropChain" ? "md:col-span-2" : ""}
+              className={index === 0 || project.title === "Lord of Gyms" || project.title === "StakeDApp" || project.title === "PropChain" ? "md:col-span-2" : ""}
             >
               <a
                 href={project.link}

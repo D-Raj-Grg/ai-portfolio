@@ -89,6 +89,11 @@ ai-portfolio/
 8. **Redeemic** - WordPress plugin turning AppSumo codes into Lemon Squeezy licenses
 9. **GymTrack Pro** - Native iOS workout tracker, live on the App Store
 10. **Gym Tross** - Flutter gym-management app (staff + members) on Supabase, live on the App Store
+11. **Lord of Gyms** - Multi-branch gym management SaaS console (Next.js 16 + Supabase RLS)
+12. **MultiStepForms** - Multi-step form builder for WordPress with payments and Google Sheets sync (AI Publish)
+13. **Formgic** - Conversational chat-style form plugin for WordPress (AI Publish)
+14. **LOG Brand Site** - Brand and marketing site for Lord of Gyms & Fitness
+15. **The Sekuwa Station** - Restaurant website for a sekuwa grill in Hetauda, Nepal
 
 ## 🚀 Getting Started
 

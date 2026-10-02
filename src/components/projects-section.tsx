@@ -228,8 +228,8 @@ const projects: Project[] = [
     badge: "v1.0.0",
   },
   {
-    title: "LOG Brand Site",
-    description: "Brand and marketing site for Lord of Gyms & Fitness, Hetauda",
+    title: "LOG Fitness",
+    description: "Brand and marketing site for Lord of Gyms & Fitness, Hetauda (lordofgyms.com)",
     longDescription:
       "Landing site for LOG, a premium gym and athletic streetwear brand at Kapur Complex, Hetauda, Nepal. Presents the brand identity and SVG-drawn monogram, the merchandise range, class offerings (strength, cardio, Zumba, dance) and supplements, and hosts the downloadable brand book and pitch deck. Built on a strict two-colour palette (Tar Road and Elegant Grey) with Next.js 16, Tailwind CSS v4, shadcn/ui and Magic UI animations. Tagline: Train hard. Wear it louder.",
     icon: Shirt,

@@ -92,7 +92,7 @@ ai-portfolio/
 11. **Lord of Gyms** - Multi-branch gym management SaaS console (Next.js 16 + Supabase RLS)
 12. **MultiStepForms** - Multi-step form builder for WordPress with payments and Google Sheets sync (AI Publish)
 13. **Formgic** - Conversational chat-style form plugin for WordPress (AI Publish)
-14. **LOG Brand Site** - Brand and marketing site for Lord of Gyms & Fitness
+14. **LOG Fitness** - Brand and marketing site for Lord of Gyms & Fitness
 15. **The Sekuwa Station** - Restaurant website for a sekuwa grill in Hetauda, Nepal
 
 ## 🚀 Getting Started

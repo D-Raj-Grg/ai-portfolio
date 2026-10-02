@@ -27,7 +27,7 @@ export function IntroVideoSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <GradientText>Watch My Introduction</GradientText>
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Get to know me better through this quick video introduction where I share my journey, passion, and what drives me.
           </p>
         </motion.div>
@@ -53,13 +53,13 @@ export function IntroVideoSection() {
           {/* Glow Effect Container */}
           <div className="relative group">
             {/* Outer Glow */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-emerald-600 via-green-600 to-teal-400 rounded-2xl opacity-75 blur-xl group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-brand via-brand-2 to-brand-3 rounded-2xl opacity-75 blur-xl group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
 
             {/* Inner Glow */}
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 via-green-500 to-teal-300 rounded-2xl opacity-50 blur-lg group-hover:opacity-75 transition duration-1000"></div>
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-brand via-brand-2 to-brand-3 rounded-2xl opacity-50 blur-lg group-hover:opacity-75 transition duration-1000"></div>
 
             {/* Video Content */}
-            <div className="relative bg-slate-900/90 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+            <div className="relative bg-card/90 backdrop-blur-xl rounded-2xl overflow-hidden border border-border shadow-2xl">
               {!isPlaying ? (
                 // Thumbnail with Play Button
                 <div className="relative aspect-video cursor-pointer" onClick={() => setIsPlaying(true)}>
@@ -92,14 +92,14 @@ export function IntroVideoSection() {
                           transition={{ duration: 0.6 }}
                         >
                           <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                            <span className="bg-gradient-to-r from-emerald-400 via-green-400 to-teal-300 text-transparent bg-clip-text">
+                            <span className="bg-gradient-to-r from-brand via-brand-2 to-brand-3 text-transparent bg-clip-text">
                               Introduction Video
                             </span>
                           </h3>
-                          <p className="text-slate-300 text-lg mb-6">
+                          <p className="text-foreground/80 text-lg mb-6">
                             Discover my journey, skills, and passion
                           </p>
-                          <div className="flex items-center justify-center gap-2 text-slate-400 text-sm">
+                          <div className="flex items-center justify-center gap-2 text-muted-foreground text-sm">
                             <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
                             <span>Watch Now</span>
                           </div>
@@ -157,8 +157,8 @@ export function IntroVideoSection() {
           </div>
 
           {/* Decorative Elements */}
-          <div className="absolute -top-20 -left-20 w-40 h-40 bg-emerald-500/20 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-green-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute -top-20 -left-20 w-40 h-40 bg-brand/20 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-brand-2/20 rounded-full blur-3xl"></div>
         </motion.div>
 
         {/* Additional Info */}
@@ -169,7 +169,7 @@ export function IntroVideoSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <p className="text-slate-400 text-sm">
+          <p className="text-muted-foreground text-sm">
             Duration: 2-3 minutes • Learn about my skills, experience, and passion for building amazing digital products
           </p>
         </motion.div>

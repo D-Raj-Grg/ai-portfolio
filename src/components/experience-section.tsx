@@ -100,10 +100,10 @@ export function ExperienceSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            Work <span className="bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">Experience</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            Work <span className="bg-gradient-to-r from-brand to-brand-2 bg-clip-text text-transparent">Experience</span>
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             6+ years of professional experience building web applications
           </p>
         </motion.div>
@@ -117,22 +117,22 @@ export function ExperienceSection() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.5 }}
             >
-              <Card className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm border-white/10 p-4 md:p-6 hover:border-white/20 transition-all duration-300 group overflow-hidden">
+              <Card className="bg-card/70 backdrop-blur-sm border-border p-4 md:p-6 hover:border-foreground/20 transition-all duration-300 group overflow-hidden">
                 <div className="flex flex-col md:flex-row md:items-start gap-4 mb-4">
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${exp.color} opacity-80 group-hover:opacity-100 transition-all flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl`}>
-                    <Briefcase className="w-6 h-6 text-white drop-shadow-lg" />
+                    <Briefcase className="w-6 h-6 text-foreground-KEEP drop-shadow-lg" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
-                      <h3 className="text-xl md:text-2xl font-bold text-white break-words">
+                      <h3 className="text-xl md:text-2xl font-bold text-foreground break-words">
                         {exp.position}
                       </h3>
-                      <Badge variant="outline" className="border-emerald-400/30 text-emerald-300 bg-emerald-500/10 flex-shrink-0 w-fit">
+                      <Badge variant="outline" className="border-primary/30 text-primary bg-primary/10 flex-shrink-0 w-fit">
                         {exp.type}
                       </Badge>
                     </div>
-                    <div className="flex flex-wrap items-center gap-2 md:gap-4 text-sm text-slate-400 mb-3">
-                      <span className="font-semibold text-emerald-400">
+                    <div className="flex flex-wrap items-center gap-2 md:gap-4 text-sm text-muted-foreground mb-3">
+                      <span className="font-semibold text-primary">
                         {exp.company}
                       </span>
                       <span className="flex items-center gap-1">
@@ -144,19 +144,19 @@ export function ExperienceSection() {
                         {exp.period}
                       </span>
                     </div>
-                    <p className="text-slate-300 mb-4 break-words">{exp.description}</p>
+                    <p className="text-foreground/80 mb-4 break-words">{exp.description}</p>
 
                     <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-white mb-2">
+                      <h4 className="text-sm font-semibold text-foreground mb-2">
                         Key Achievements:
                       </h4>
                       <ul className="space-y-2">
                         {exp.achievements.map((achievement, i) => (
                           <li
                             key={i}
-                            className="text-sm text-slate-400 flex items-start gap-2"
+                            className="text-sm text-muted-foreground flex items-start gap-2"
                           >
-                            <span className="text-emerald-400 mt-1 flex-shrink-0">▸</span>
+                            <span className="text-primary mt-1 flex-shrink-0">▸</span>
                             <span className="break-words">{achievement}</span>
                           </li>
                         ))}
@@ -165,7 +165,7 @@ export function ExperienceSection() {
 
                     {exp.technologies && exp.technologies.length > 0 && (
                       <div className="mb-4">
-                        <h4 className="text-sm font-semibold text-white mb-2">
+                        <h4 className="text-sm font-semibold text-foreground mb-2">
                           Technologies Used:
                         </h4>
                         <div className="flex flex-wrap gap-2">
@@ -173,7 +173,7 @@ export function ExperienceSection() {
                             <Badge
                               key={tech}
                               variant="outline"
-                              className="bg-gradient-to-r from-emerald-500/10 to-green-500/10 border-emerald-400/30 text-emerald-300"
+                              className="bg-primary/10 border-primary/30 text-primary"
                             >
                               {tech}
                             </Badge>
@@ -184,7 +184,7 @@ export function ExperienceSection() {
 
                     {exp.projects.length > 0 && (
                       <div>
-                        <h4 className="text-sm font-semibold text-white mb-2">
+                        <h4 className="text-sm font-semibold text-foreground mb-2">
                           Projects Delivered:
                         </h4>
                         <div className="flex flex-wrap gap-2">
@@ -192,7 +192,7 @@ export function ExperienceSection() {
                             <Badge
                               key={project}
                               variant="secondary"
-                              className="bg-white/5 hover:bg-white/10 border border-white/10 text-white"
+                              className="bg-foreground/5 hover:bg-foreground/10 border border-border text-foreground"
                             >
                               {project}
                             </Badge>

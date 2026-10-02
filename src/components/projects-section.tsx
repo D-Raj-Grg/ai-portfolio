@@ -235,7 +235,7 @@ const projects: Project[] = [
     icon: Shirt,
     link: "https://lordofgyms.com/",
     tags: ["Next.js 16", "Tailwind v4", "Magic UI", "Branding"],
-    color: "#e2e8f0",
+    color: "#8B9096",
     gradient: "from-slate-500/20 to-emerald-500/20",
     badge: "Live",
   },
@@ -302,7 +302,7 @@ export function ProjectsSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <GradientText>Featured Projects</GradientText>
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Transforming ideas into powerful digital experiences. Here are some
             of the impactful projects I&apos;ve contributed to.
           </p>
@@ -349,23 +349,23 @@ export function ProjectsSection() {
 
                     {/* Title */}
                     <div className="flex items-center gap-2 mb-2">
-                      <h3 className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:to-green-400 transition-all">
+                      <h3 className="text-2xl font-bold text-foreground group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand group-hover:to-brand-2 transition-all">
                         {project.title}
                       </h3>
                       {project.badge && (
-                        <Badge className="bg-emerald-500/20 text-emerald-400 border-emerald-500/30 text-xs px-2 py-0.5">
+                        <Badge className="bg-primary/15 text-primary border-primary/30 text-xs px-2 py-0.5">
                           {project.badge}
                         </Badge>
                       )}
                     </div>
 
                     {/* Description */}
-                    <p className="text-slate-300 mb-3 font-medium text-base">
+                    <p className="text-foreground/80 mb-3 font-medium text-base">
                       {project.description}
                     </p>
 
                     {/* Long Description */}
-                    <p className="text-sm text-slate-400 mb-4 line-clamp-3 leading-relaxed">
+                    <p className="text-sm text-muted-foreground mb-4 line-clamp-3 leading-relaxed">
                       {project.longDescription}
                     </p>
 
@@ -375,7 +375,7 @@ export function ProjectsSection() {
                         <Badge
                           key={tag}
                           variant="outline"
-                          className="border-white/20 text-slate-300 hover:bg-white/10 text-xs"
+                          className="border-foreground/20 text-foreground/80 hover:bg-foreground/10 text-xs"
                         >
                           {tag}
                         </Badge>
@@ -383,7 +383,7 @@ export function ProjectsSection() {
                     </div>
 
                     {/* Link */}
-                    <div className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-emerald-400 group-hover:text-emerald-300 transition-colors">
+                    <div className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-primary group-hover:text-primary/80 transition-colors">
                       <span>Visit Project</span>
                       <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </div>
@@ -402,12 +402,12 @@ export function ProjectsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <p className="text-slate-400 mb-6">
+          <p className="text-muted-foreground mb-6">
             Interested in collaborating on the next big thing?
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white font-semibold rounded-full transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-brand to-brand-2 hover:brightness-110 text-primary-foreground font-semibold rounded-full transition-all hover:scale-105"
           >
             Let&apos;s Work Together
           </a>

@@ -40,7 +40,7 @@ export function AboutSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             About <GradientText>Me</GradientText>
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             From building simple Blogspot sites in 10th grade to architecting AI-powered applications
           </p>
         </motion.div>
@@ -54,16 +54,16 @@ export function AboutSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mb-16"
           >
-            <Card className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm border-white/10 p-8 md:p-12">
+            <Card className="bg-card/70 backdrop-blur-sm border-border p-8 md:p-12">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-500/20 to-green-500/20 flex items-center justify-center">
-                      <Heart className="w-6 h-6 text-emerald-400" />
+                      <Heart className="w-6 h-6 text-primary" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white">My Journey</h3>
+                    <h3 className="text-2xl font-bold text-foreground">My Journey</h3>
                   </div>
-                  <div className="space-y-4 text-slate-300 leading-relaxed">
+                  <div className="space-y-4 text-foreground/80 leading-relaxed">
                     <p>
                       My coding journey started way back in school around 10th grade when I first
                       discovered Blogspot. I didn&apos;t know anything about coding, but creating small
@@ -86,11 +86,11 @@ export function AboutSection() {
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500/20 to-teal-300/20 flex items-center justify-center">
-                      <Lightbulb className="w-6 h-6 text-green-400" />
+                      <Lightbulb className="w-6 h-6 text-primary" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white">What Drives Me</h3>
+                    <h3 className="text-2xl font-bold text-foreground">What Drives Me</h3>
                   </div>
-                  <div className="space-y-4 text-slate-300 leading-relaxed">
+                  <div className="space-y-4 text-foreground/80 leading-relaxed">
                     <p>
                       What really excites me? The intersection of AI and user experience. I love
                       building things that don&apos;t just work they feel intelligent and intuitive.
@@ -124,14 +124,14 @@ export function AboutSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
               >
-                <Card className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm border-white/10 p-6 hover:border-white/20 transition-all duration-300 group text-center">
+                <Card className="bg-card/70 backdrop-blur-sm border-border p-6 hover:border-foreground/20 transition-all duration-300 group text-center">
                   <div
                     className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br ${highlight.color} opacity-20 group-hover:opacity-30 transition-opacity flex items-center justify-center`}
                   >
-                    <highlight.icon className="w-8 h-8 text-white" />
+                    <highlight.icon className="w-8 h-8 text-foreground" />
                   </div>
-                  <h3 className="text-3xl font-bold text-white mb-2">{highlight.title}</h3>
-                  <p className="text-slate-400 text-sm">{highlight.description}</p>
+                  <h3 className="text-3xl font-bold text-foreground mb-2">{highlight.title}</h3>
+                  <p className="text-muted-foreground text-sm">{highlight.description}</p>
                 </Card>
               </motion.div>
             ))}
@@ -144,17 +144,17 @@ export function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <Card className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm border-white/10 p-8">
+            <Card className="bg-card/70 backdrop-blur-sm border-border p-8">
               <div className="flex items-start gap-4">
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500/20 to-teal-500/20 flex items-center justify-center flex-shrink-0">
-                  <GraduationCap className="w-7 h-7 text-green-400" />
+                  <GraduationCap className="w-7 h-7 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Education</h3>
-                  <p className="text-lg text-slate-300 mb-1">
+                  <h3 className="text-2xl font-bold text-foreground mb-2">Education</h3>
+                  <p className="text-lg text-foreground/80 mb-1">
                     Bachelor of Engineering - Information Technology
                   </p>
-                  <p className="text-slate-400">Mumbai University</p>
+                  <p className="text-muted-foreground">Mumbai University</p>
                 </div>
               </div>
             </Card>

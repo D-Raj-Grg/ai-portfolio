@@ -114,13 +114,13 @@ const skillCategories = [
 const getLevelColor = (level: string) => {
   switch (level) {
     case "Expert":
-      return "bg-emerald-500/25 text-emerald-200 border-emerald-400/50";
+      return "bg-primary/25 text-primary border-primary/50";
     case "Advanced":
-      return "bg-emerald-500/15 text-emerald-300 border-emerald-500/30";
+      return "bg-primary/15 text-primary border-primary/30";
     case "Intermediate":
-      return "bg-emerald-500/10 text-emerald-400/80 border-emerald-500/20";
+      return "bg-primary/10 text-primary/80 border-primary/20";
     default:
-      return "bg-slate-500/20 text-slate-300 border-slate-500/30";
+      return "bg-muted text-muted-foreground border-border";
   }
 };
 
@@ -135,10 +135,10 @@ export function SkillsSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            Technical <span className="bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">Skills</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            Technical <span className="bg-gradient-to-r from-brand to-brand-2 bg-clip-text text-transparent">Skills</span>
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             Proven expertise across modern web technologies with hands-on experience and measurable impact
           </p>
         </motion.div>
@@ -165,11 +165,11 @@ export function SkillsSection() {
                   {category.skills.map((skill) => (
                     <div
                       key={skill.name}
-                      className="flex items-center justify-between gap-2 p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
+                      className="flex items-center justify-between gap-2 p-2 rounded-lg bg-foreground/5 hover:bg-foreground/10 transition-colors"
                     >
                       <div className="flex-1">
-                        <p className="text-sm font-medium text-white">{skill.name}</p>
-                        <p className="text-xs text-slate-400">{skill.years} experience</p>
+                        <p className="text-sm font-medium text-foreground">{skill.name}</p>
+                        <p className="text-xs text-muted-foreground">{skill.years} experience</p>
                       </div>
                       <Badge
                         variant="outline"
@@ -194,16 +194,16 @@ export function SkillsSection() {
           className="mt-12 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 text-sm"
         >
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-emerald-400 flex-shrink-0"></div>
-            <span className="text-slate-400">Expert - Production-ready</span>
+            <div className="w-3 h-3 rounded-full bg-primary flex-shrink-0"></div>
+            <span className="text-muted-foreground">Expert - Production-ready</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-emerald-500/70 flex-shrink-0"></div>
-            <span className="text-slate-400">Advanced - Strong proficiency</span>
+            <div className="w-3 h-3 rounded-full bg-primary/70 flex-shrink-0"></div>
+            <span className="text-muted-foreground">Advanced - Strong proficiency</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-emerald-500/40 flex-shrink-0"></div>
-            <span className="text-slate-400">Intermediate - Actively learning</span>
+            <div className="w-3 h-3 rounded-full bg-primary/40 flex-shrink-0"></div>
+            <span className="text-muted-foreground">Intermediate - Actively learning</span>
           </div>
         </motion.div>
       </div>

@@ -64,7 +64,7 @@ interface GradientTextProps {
 export function GradientText({ children, className = "" }: GradientTextProps) {
   return (
     <span
-      className={`bg-gradient-to-r from-emerald-400 via-green-400 to-teal-300 bg-clip-text text-transparent animate-gradient ${className}`}
+      className={`bg-gradient-to-r from-brand via-brand-2 to-brand-3 bg-clip-text text-transparent animate-gradient ${className}`}
       style={{
         backgroundSize: "200% 200%",
       }}
@@ -103,7 +103,7 @@ export function TypewriterEffect({
         </motion.span>
       ))}
       <motion.span
-        className={`inline-block w-1 h-8 bg-emerald-500 ml-1 ${cursorClassName}`}
+        className={`inline-block w-1 h-8 bg-primary ml-1 ${cursorClassName}`}
         animate={{
           opacity: [1, 0, 1],
         }}

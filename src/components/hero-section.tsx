@@ -21,7 +21,7 @@ export function HeroSection() {
             transition={{ duration: 0.5 }}
             className="mb-4"
           >
-            <span className="text-emerald-400 font-mono text-sm md:text-base">
+            <span className="text-primary font-mono text-sm md:text-base">
               Hi, my name is
             </span>
           </motion.div>
@@ -29,7 +29,7 @@ export function HeroSection() {
           {/* Name with Sparkles */}
           <Sparkles>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
-              <AnimatedText className="text-white">
+              <AnimatedText className="text-foreground">
                 Divyashwar Raj Gurung
               </AnimatedText>
             </h1>
@@ -47,7 +47,7 @@ export function HeroSection() {
 
           {/* Description */}
           <motion.p
-            className="text-lg md:text-xl text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
@@ -60,7 +60,7 @@ export function HeroSection() {
 
           {/* Contact Info */}
           <motion.div
-            className="flex flex-wrap items-center justify-center gap-4 mb-10 text-sm text-slate-400"
+            className="flex flex-wrap items-center justify-center gap-4 mb-10 text-sm text-muted-foreground"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.5 }}
@@ -84,7 +84,7 @@ export function HeroSection() {
           >
             <Button
               size="lg"
-              className="bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white font-semibold px-8 w-full sm:w-auto"
+              className="bg-gradient-to-r from-brand to-brand-2 hover:brightness-110 text-primary-foreground font-semibold px-8 w-full sm:w-auto"
               asChild
             >
               <a href="#contact">Get In Touch</a>
@@ -92,7 +92,7 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white/20 hover:bg-white/10 text-white w-full sm:w-auto"
+              className="border-foreground/20 hover:bg-foreground/10 text-foreground w-full sm:w-auto"
               asChild
             >
               <a href="#projects">View My Work</a>
@@ -100,7 +100,7 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white/20 hover:bg-white/10 text-white gap-2 w-full sm:w-auto"
+              className="border-foreground/20 hover:bg-foreground/10 text-foreground gap-2 w-full sm:w-auto"
               asChild
             >
               <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
@@ -121,7 +121,7 @@ export function HeroSection() {
               href="https://github.com/D-Raj-Grg"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-white transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors"
             >
               <Github className="w-6 h-6" />
             </a>
@@ -129,13 +129,13 @@ export function HeroSection() {
               href="https://www.linkedin.com/in/divyashwar"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-white transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors"
             >
               <Linkedin className="w-6 h-6" />
             </a>
             <a
               href="mailto:clixacom@gmail.com"
-              className="text-slate-400 hover:text-white transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors"
             >
               <Mail className="w-6 h-6" />
             </a>
@@ -154,9 +154,9 @@ export function HeroSection() {
             repeatType: "loop",
           }}
         >
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
+          <div className="w-6 h-10 border-2 border-foreground/30 rounded-full flex justify-center pt-2">
             <motion.div
-              className="w-1.5 h-1.5 bg-white rounded-full"
+              className="w-1.5 h-1.5 bg-foreground rounded-full"
               animate={{
                 y: [0, 12, 0],
               }}

@@ -16,6 +16,7 @@ export function InteractiveBackground() {
   const mousePositionRef = useRef({ x: 0, y: 0 });
   const dotsRef = useRef<Dot[]>([]);
   const animationFrameRef = useRef<number | undefined>(undefined);
+  const dotColorRef = useRef("236 237 236");
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -36,6 +37,15 @@ export function InteractiveBackground() {
       // Reinitialize dots on resize
       initializeDots();
     };
+
+    // Dot colour follows the active theme via the --dot-rgb token.
+    const readDotColor = () => {
+      const v = getComputedStyle(document.documentElement).getPropertyValue("--dot-rgb").trim();
+      if (v) dotColorRef.current = v;
+    };
+    readDotColor();
+    const themeObserver = new MutationObserver(readDotColor);
+    themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
 
     const initializeDots = () => {
       dotsRef.current = [];
@@ -81,7 +91,7 @@ export function InteractiveBackground() {
         }
 
         // Draw dot with simpler rendering
-        ctx.fillStyle = `rgba(255, 255, 255, ${0.4 + Math.random() * 0.2})`;
+        ctx.fillStyle = `rgb(${dotColorRef.current} / ${0.4 + Math.random() * 0.2})`;
         ctx.beginPath();
         ctx.arc(dot.x, dot.y, dot.size, 0, Math.PI * 2);
         ctx.fill();
@@ -119,6 +129,7 @@ export function InteractiveBackground() {
         cancelAnimationFrame(animationFrameRef.current);
       }
       clearTimeout(resizeTimeout);
+      themeObserver.disconnect();
     };
   }, []);
 
@@ -136,7 +147,7 @@ export function AnimatedGradientBackground() {
   return (
     <div className="fixed inset-0 -z-10">
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-emerald-950 via-slate-900 to-green-950"
+        className="absolute inset-0 bg-gradient-to-br from-glow-1 via-background to-glow-2"
         animate={{
           backgroundPosition: ["0% 0%", "100% 100%"],
         }}
@@ -147,7 +158,7 @@ export function AnimatedGradientBackground() {
         }}
       />
       <motion.div
-        className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-emerald-300/10 via-transparent to-green-500/10"
+        className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-brand/10 via-transparent to-brand-2/10"
         animate={{
           opacity: [0.3, 0.6, 0.3],
         }}
@@ -157,7 +168,7 @@ export function AnimatedGradientBackground() {
           repeatType: "reverse",
         }}
       />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-600/20 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand/20 via-transparent to-transparent" />
     </div>
   );
 }

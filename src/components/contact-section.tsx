@@ -54,10 +54,10 @@ export function ContactSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            Get In <span className="bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">Touch</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            Get In <span className="bg-gradient-to-r from-brand to-brand-2 bg-clip-text text-transparent">Touch</span>
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             I&apos;m always open to discussing new projects, creative ideas, or
             opportunities to be part of your vision.
           </p>
@@ -74,7 +74,7 @@ export function ContactSection() {
                 transition={{ delay: index * 0.1, duration: 0.5 }}
               >
                 <Card
-                  className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm border-white/10 p-6 hover:border-white/20 transition-all duration-300 group cursor-pointer"
+                  className="bg-card/70 backdrop-blur-sm border-border p-6 hover:border-foreground/20 transition-all duration-300 group cursor-pointer"
                   onClick={() => {
                     if (contact.href !== "#") {
                       window.open(contact.href, "_blank");
@@ -83,13 +83,13 @@ export function ContactSection() {
                 >
                   <div className="flex items-center gap-4">
                     <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${contact.color} opacity-80 group-hover:opacity-100 transition-all flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl`}>
-                      <contact.icon className="w-6 h-6 text-white drop-shadow-lg" />
+                      <contact.icon className="w-6 h-6 text-foreground-KEEP drop-shadow-lg" />
                     </div>
                     <div>
-                      <h3 className="text-sm font-semibold text-slate-400 mb-1">
+                      <h3 className="text-sm font-semibold text-muted-foreground mb-1">
                         {contact.label}
                       </h3>
-                      <p className="text-white font-medium">{contact.value}</p>
+                      <p className="text-foreground font-medium">{contact.value}</p>
                     </div>
                   </div>
                 </Card>
@@ -104,18 +104,18 @@ export function ContactSection() {
             transition={{ delay: 0.6, duration: 0.5 }}
             className="text-center"
           >
-            <Card className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm border-white/10 p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">
+            <Card className="bg-card/70 backdrop-blur-sm border-border p-8">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
                 Let&apos;s Work Together
               </h3>
-              <p className="text-slate-400 mb-6">
+              <p className="text-muted-foreground mb-6">
                 Whether you have a project in mind or just want to chat about
                 web development, feel free to reach out!
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white font-semibold w-full sm:w-auto"
+                  className="bg-gradient-to-r from-brand to-brand-2 hover:brightness-110 text-primary-foreground font-semibold w-full sm:w-auto"
                   asChild
                 >
                   <a href="mailto:clixacom@gmail.com">Send an Email</a>
@@ -123,7 +123,7 @@ export function ContactSection() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white/20 hover:bg-white/10 text-white w-full sm:w-auto"
+                  className="border-foreground/20 hover:bg-foreground/10 text-foreground w-full sm:w-auto"
                   asChild
                 >
                   <a
@@ -137,7 +137,7 @@ export function ContactSection() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white/20 hover:bg-white/10 text-white gap-2 w-full sm:w-auto"
+                  className="border-foreground/20 hover:bg-foreground/10 text-foreground gap-2 w-full sm:w-auto"
                   asChild
                 >
                   <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
@@ -157,7 +157,7 @@ export function ContactSection() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.8, duration: 0.5 }}
-        className="mt-20 text-center text-slate-500 text-sm"
+        className="mt-20 text-center text-muted-foreground/70 text-sm"
       >
         <p>© 2024 Divyashwar Raj Gurung. All rights reserved.</p>
         <p className="mt-2">

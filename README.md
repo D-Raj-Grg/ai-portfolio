@@ -6,6 +6,7 @@ A stunning, modern portfolio website showcasing my work as a Senior Software Eng
 
 ## 🚀 Features
 
+- **Light & Dark Mode** - Charcoal dark theme and soft off-white light theme (no pure black or white), toggled from the navbar and remembered per visitor
 - **Interactive Animations** - Smooth 60fps animations powered by Framer Motion
 - **Custom Cursor Tracker** - Hardware-accelerated custom cursor with spring physics
 - **Interactive Background** - Canvas-based particle system that responds to mouse movement
@@ -17,7 +18,7 @@ A stunning, modern portfolio website showcasing my work as a Senior Software Eng
 
 ## 🎨 Design Highlights
 
-- Modern dark theme with gradient backgrounds
+- Charcoal dark theme and off-white light theme driven by CSS design tokens
 - Glassmorphism effects and backdrop blur
 - Smooth scroll animations with viewport detection
 - Brand-specific color schemes for each project

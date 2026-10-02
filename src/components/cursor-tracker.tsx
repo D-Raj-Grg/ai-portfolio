@@ -59,7 +59,7 @@ export function CursorTracker() {
     <>
       {/* Main cursor dot */}
       <motion.div
-        className="fixed top-0 left-0 w-4 h-4 bg-primary rounded-full pointer-events-none z-50 mix-blend-difference"
+        className="fixed top-0 left-0 w-4 h-4 bg-primary rounded-full pointer-events-none z-50 dark:mix-blend-difference"
         style={{
           x: cursorXSpring,
           y: cursorYSpring,
@@ -74,7 +74,7 @@ export function CursorTracker() {
 
       {/* Cursor ring/outline */}
       <motion.div
-        className="fixed top-0 left-0 w-10 h-10 border-2 border-primary/50 rounded-full pointer-events-none z-50 mix-blend-difference"
+        className="fixed top-0 left-0 w-10 h-10 border-2 border-primary/50 rounded-full pointer-events-none z-50 dark:mix-blend-difference"
         style={{
           x: ringXSpring,
           y: ringYSpring,

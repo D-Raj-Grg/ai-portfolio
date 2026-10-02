@@ -43,8 +43,8 @@ export function BentoCard({
   return (
     <motion.div
       className={cn(
-        "group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm p-6",
-        "hover:border-white/20 transition-all duration-300",
+        "group relative overflow-hidden rounded-xl border border-border bg-card/70 backdrop-blur-sm p-6",
+        "hover:border-foreground/20 transition-all duration-300",
         className
       )}
       whileHover={{ scale: 1.02 }}
@@ -57,15 +57,15 @@ export function BentoCard({
       )}
       <div className="relative z-10">
         {Icon && (
-          <div className="mb-4 w-12 h-12 rounded-lg bg-gradient-to-br from-emerald-500/20 to-green-500/20 flex items-center justify-center">
-            <Icon className="w-6 h-6 text-emerald-400" />
+          <div className="mb-4 w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-brand-2/20 flex items-center justify-center">
+            <Icon className="w-6 h-6 text-primary" />
           </div>
         )}
         {title && (
-          <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
+          <h3 className="text-xl font-semibold mb-2 text-foreground">{title}</h3>
         )}
         {description && (
-          <p className="text-sm text-slate-400 mb-4">{description}</p>
+          <p className="text-sm text-muted-foreground mb-4">{description}</p>
         )}
         {children}
       </div>

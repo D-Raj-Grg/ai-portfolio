@@ -7,13 +7,33 @@ import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 const experiences = [
   {
+    company: "AI Publish",
+    position: "Senior Software Engineer",
+    location: "Remote",
+    period: "Jan 2026 - Present",
+    type: "Lead Developer",
+    description:
+      "Lead developer of MultiStepForms, a WordPress form and conversational-flow plugin. I own the full cycle: architecture, build, testing, releases and tester support.",
+    achievements: [
+      "Designed and shipped Multi-Step Form mode alongside the conversational builder: step validation, branching, review step, save and resume, popup mode, and Stripe/PayPal payment steps. Delivered with 483 passing tests plus 12 ready-made templates",
+      "Built Google Sheets integration without Google's CASA security review, using Apps Script Web App and Service Account modes, plus a self-hosted \"Connect with Google\" OAuth option",
+      "Cut front-end weight for GTmetrix and Lighthouse: form script from ~117 KB to ~26 KB gzipped and CSS from 47 KB to 19 KB, using lazy loading, code splitting and non-blocking styles",
+      "Fixed data-integrity bugs, including multi-input steps saving only one answer, long forms losing answers to rate limits, and webhooks re-firing when stepping back",
+      "Added cache-aware publishing for WP Rocket, LiteSpeed, Cloudflare and more, so form edits reach visitors immediately",
+      "Shipped a steady release cadence (v2.1 to v2.4): spam protection (reCAPTCHA v3, honeypot), 7 new input blocks, retention controls, a redesigned settings UI and AI blocks (OpenAI, Claude, Mistral)",
+    ],
+    technologies: ["WordPress", "PHP", "React", "TypeScript", "Stripe/PayPal", "Google Apps Script", "OAuth 2.0", "OpenAI/Claude APIs"],
+    projects: ["MultiStepForms", "Formgic"],
+    color: "from-lime-400 to-emerald-500",
+  },
+  {
     company: "BrainStorm Force LLC",
     position: "Software Developer - Front-end Lead Developer",
     location: "Remote",
-    period: "Feb 2023 - Present",
+    period: "Feb 2023 - Jan 2026",
     type: "Led Frontend Development",
     description:
-      "Leading frontend architecture and development for multiple SaaS products serving 7M+ users worldwide. Spearheading Next.js migrations, building workflow automation systems, and mentoring junior developers.",
+      "Led frontend architecture and development for multiple SaaS products serving 7M+ users worldwide. Spearheaded Next.js migrations, built workflow automation systems, and mentored junior developers.",
     achievements: [
       "Led React to Next.js 14 migration for OttoKit, reducing load time by 60% and increasing customer retention from 65% to 91% (40% improvement)",
       "Architected interactive canvas workflow builder using ReactFlow v12, enabling no-code automation for 10,000+ active users",
@@ -84,7 +104,7 @@ export function ExperienceSection() {
             Work <span className="bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">Experience</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            5+ years of professional experience building web applications
+            6+ years of professional experience building web applications
           </p>
         </motion.div>
 

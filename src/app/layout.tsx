@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Divyashwar Raj Gurung | Senior Software Engineer & AI Developer",
-  description: "Portfolio of Divyashwar Raj Gurung - Senior Software Engineer with 5+ years of experience building AI-powered SaaS applications, WordPress themes, and modern web apps using React, Next.js, TypeScript, and Claude AI.",
+  description: "Portfolio of Divyashwar Raj Gurung - Senior Software Engineer with 6+ years of experience building AI-powered SaaS applications, WordPress themes, and modern web apps using React, Next.js, TypeScript, and Claude AI.",
   keywords: [
     "Software Engineer",
     "AI Developer",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://divyashwar.vercel.app"),
   openGraph: {
     title: "Divyashwar Raj Gurung | Senior Software Engineer & AI Developer",
-    description: "Building AI-powered web applications and automation platforms. 5+ years of experience with React, Next.js, and modern web technologies.",
+    description: "Building AI-powered web applications and automation platforms. 6+ years of experience with React, Next.js, and modern web technologies.",
     url: "https://divyashwar.vercel.app",
     siteName: "Divyashwar Raj Gurung Portfolio",
     type: "website",

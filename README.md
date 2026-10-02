@@ -88,6 +88,7 @@ ai-portfolio/
 7. **ExtraHelper Mobile** - Flutter staff app for the ExtraHelper platform, live on the App Store
 8. **Redeemic** - WordPress plugin turning AppSumo codes into Lemon Squeezy licenses
 9. **GymTrack Pro** - Native iOS workout tracker, live on the App Store
+10. **Gym Tross** - Flutter gym-management app (staff + members) on Supabase, live on the App Store
 
 ## 🚀 Getting Started
 
@@ -177,7 +178,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 About Me
 
-I'm Divyashwar Raj Gurung, a Senior Software Engineer with 5+ years of experience building high-performance web applications. I specialize in:
+I'm Divyashwar Raj Gurung, a Senior Software Engineer with 6+ years of experience building high-performance web applications. I specialize in:
 
 - Frontend Development (React, Next.js, TypeScript)
 - AI/ML Integration (Claude AI, RAG systems)

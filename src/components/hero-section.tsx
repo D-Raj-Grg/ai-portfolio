@@ -54,7 +54,7 @@ export function HeroSection() {
           >
             I am a passionate Software Developer with a knack for crafting
             intuitive and high-performing web applications in SaaS and WordPress
-            environments. With over 5 years of experience, I create seamless
+            environments. With over 6 years of experience, I create seamless
             user experiences using modern web technologies.
           </motion.p>
 

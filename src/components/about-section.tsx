@@ -8,7 +8,7 @@ import { Award, Briefcase, Code2, GraduationCap, Heart, Lightbulb } from "lucide
 const highlights = [
   {
     icon: Briefcase,
-    title: "5+ Years",
+    title: "6+ Years",
     description: "Professional Experience",
     color: "from-emerald-500 to-lime-300",
   },
@@ -76,9 +76,9 @@ export function AboutSection() {
                       learning, and experimenting bit by bit until coding became my career.
                     </p>
                     <p>
-                      Over the past 5+ years, I&apos;ve had the privilege of contributing to products
-                      like Astra Theme (used by 7M+ websites) and building AI-powered applications
-                      that solve real problems for real people.
+                      Over the past 6+ years, I&apos;ve had the privilege of contributing to products
+                      like Astra Theme (used by 7M+ websites), leading the MultiStepForms WordPress
+                      plugin at AI Publish, and shipping native and Flutter apps to the App Store.
                     </p>
                   </div>
                 </div>

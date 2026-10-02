@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen, Video, Coins, Building2, Dumbbell, UtensilsCrossed, Smartphone, Ticket } from "lucide-react";
+import { ExternalLink, Zap, ShoppingCart, Target, Palette, Sparkles, MessageSquare, Shield, Languages, ChefHat, BookOpen, Video, Coins, Building2, Dumbbell, UtensilsCrossed, Smartphone, Ticket, QrCode } from "lucide-react";
 import { BentoGrid, BentoCard } from "./magicui/bento-grid";
 import { GradientText } from "./magicui/animated-text";
 import { Badge } from "./ui/badge";
@@ -66,6 +66,18 @@ const projects: Project[] = [
     tags: ["Flutter", "Dart", "Riverpod", "Drift", "App Store"],
     color: "#54c5f8",
     gradient: "from-teal-500/20 to-emerald-400/20",
+    badge: "Live on App Store",
+  },
+  {
+    title: "Gym Tross",
+    description: "Flutter gym-management app for staff and members, published on the App Store",
+    longDescription:
+      "Mobile companion to the Lord of Gyms console, built for cash-heavy gym chains in Nepal and South Asia. One Flutter binary serves two roles: staff register members, scan QR check-ins, record payments and renewals, log walk-in visitors and switch branches, while members see their own membership status and history. Runs directly against the shared Supabase project with row-level security as the tenant boundary, money stored as integer paisa, append-only financial history, and multi-table writes routed through Postgres RPCs. Riverpod, Freezed and go_router on the client, Firebase push notifications, and deep links for invite and recovery flows. Source on GitHub: D-Raj-Grg/logfitness_flutter.",
+    icon: QrCode,
+    link: "https://apps.apple.com/in/app/gym-tross/id6810993707",
+    tags: ["Flutter", "Supabase", "RLS", "Riverpod", "App Store"],
+    color: "#8B9096",
+    gradient: "from-emerald-500/20 to-lime-400/20",
     badge: "Live on App Store",
   },
   {
@@ -157,17 +169,6 @@ const projects: Project[] = [
     gradient: "from-lime-400/20 to-green-700/20",
   },
   {
-    title: "LinguaChat",
-    description: "AI-Powered Language Learning",
-    longDescription:
-      "Master any language through conversation. An AI companion that enables users to practice real dialogue in 5+ languages, receive instant grammar corrections, and build confidence with adaptive difficulty scaling. Features scenario-based practice and comprehensive progress tracking.",
-    icon: Languages,
-    link: "https://ai-language-learning-raj.vercel.app/",
-    tags: ["OpenAI", "Next.js", "TypeScript", "5+ Languages"],
-    color: "#3b82f6",
-    gradient: "from-emerald-500/20 to-lime-300/20",
-  },
-  {
     title: "Redeemic",
     description: "Turns AppSumo codes into Lemon Squeezy licenses",
     longDescription:
@@ -189,6 +190,17 @@ const projects: Project[] = [
     tags: ["Solidity", "OpenZeppelin", "Wagmi v2", "Next.js 14"],
     color: "#a855f7",
     gradient: "from-green-500/20 to-emerald-300/20",
+  },
+  {
+    title: "LinguaChat",
+    description: "AI-Powered Language Learning",
+    longDescription:
+      "Master any language through conversation. An AI companion that enables users to practice real dialogue in 5+ languages, receive instant grammar corrections, and build confidence with adaptive difficulty scaling. Features scenario-based practice and comprehensive progress tracking.",
+    icon: Languages,
+    link: "https://ai-language-learning-raj.vercel.app/",
+    tags: ["OpenAI", "Next.js", "TypeScript", "5+ Languages"],
+    color: "#3b82f6",
+    gradient: "from-emerald-500/20 to-lime-300/20",
   },
   {
     title: "PDF Q&A AI SaaS",
